@@ -5,4 +5,25 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  color: gray;
+}
+
+/* Resume Generator */
+.generate-Resume {
+  background-color: blueviolet;
+  max-width: 900px;
+}
+
+/* Resume Left Portion for About Me, Personal Info, Languages ETC. */
+.left-Portion {
+  width: 35%;
+  height: 100%;
+  background-color: #222a35;
+}
+
+/* Profile Image */
+img {
+  width: 250px;
+  border: 3px solid crimson;
+  border-radius: 50%;
 }
