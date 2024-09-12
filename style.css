@@ -1,39 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --Red: crimson;
+  --Dark: #222a35;
+  --text-onDark: white;
+  --text-onLight: gray;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  color: gray;
 }
 
 body {
   display: flex;
   justify-content: center;
+  background-color: gray;
 }
 
 /* Resume Generator */
 .generate-Resume {
-  background-color: blueviolet;
   max-width: 900px;
   display: flex;
   margin-top: 30px;
+  background-color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Resume Left Portion for About Me, Personal Info, Languages ETC. */
 .left-Portion {
   width: 35%;
   margin-left: 30px;
-  background-color: #222a35;
+  background-color: var(--Dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Profile Image */
 img {
   width: 250px;
   margin-top: 80px;
-  border: 3px solid crimson;
+  border: 3px solid var(--Red);
   border-radius: 50%;
+}
+
+/* Name & Designation */
+.section-Name {
 }
 
 /* Resume Right Portion for Experience, Education & Skills */
@@ -46,6 +62,22 @@ img {
 @media screen and (max-width: 700px) {
   /* Resume Generator */
   .generate-Resume {
-    margin-top: 30px;
+    display: block;
+  }
+
+  /* Resume Left Portion */
+  .left-Portion {
+    width: 80%;
+    margin: 0px auto;
+  }
+
+  /* Profile Image */
+  img {
+    width: 70%;
+  }
+
+  /* Resume Right Portion */
+  .right-Portion {
+    width: 100%;
   }
 }
