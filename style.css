@@ -8,22 +8,44 @@
   color: gray;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
 /* Resume Generator */
 .generate-Resume {
   background-color: blueviolet;
   max-width: 900px;
+  display: flex;
+  margin-top: 30px;
 }
 
 /* Resume Left Portion for About Me, Personal Info, Languages ETC. */
 .left-Portion {
   width: 35%;
-  height: 100%;
+  margin-left: 30px;
   background-color: #222a35;
 }
 
 /* Profile Image */
 img {
   width: 250px;
+  margin-top: 80px;
   border: 3px solid crimson;
   border-radius: 50%;
+}
+
+/* Resume Right Portion for Experience, Education & Skills */
+.right-Portion {
+  width: 55%;
+  background-color: #7dd681;
+}
+
+/* Responsive Setup */
+@media screen and (max-width: 700px) {
+  /* Resume Generator */
+  .generate-Resume {
+    margin-top: 30px;
+  }
 }
