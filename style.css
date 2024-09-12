@@ -63,6 +63,7 @@ img {
 }
 
 /* Name & Designation for Media*/
+
 .section-NameMedia {
   display: none;
   flex-direction: column;
@@ -88,7 +89,7 @@ img {
 
 /* About Me */
 .heading-AboutMe {
-  margin: 3rem 0rem 0.5rem;
+  margin: 3.5rem 0rem 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 1.3rem;
@@ -99,18 +100,49 @@ img {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 
 /* Contact Info */
+.contact-Sec {
+  margin-bottom: 3.5rem;
+}
 .contact-Info {
   display: flex;
+  margin-bottom: 1rem;
 }
 .info-Icon {
+  background-color: var(--Red);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  font-size: 0.7rem;
 }
 .info-Text {
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
+/* Languages Known */
+.languages {
+  width: 70%;
+  padding: 6px;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--Red);
+  background-color: var(--text-white);
+  margin-bottom: 1rem;
+}
+.heading-Language {
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 /* Resume Right Portion for Experience, Education & Skills */
 .right-Portion {
   width: 55%;
