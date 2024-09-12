@@ -24,6 +24,7 @@ body {
 .generate-Resume {
   position: relative;
   max-width: 900px;
+  min-height: 1100px;
   display: flex;
   margin-top: 2rem;
   background-color: white;
@@ -46,7 +47,7 @@ body {
 img {
   z-index: 9999;
   width: 80%;
-  margin-top: 8rem;
+  margin-top: 7rem;
   border: 3px solid var(--Red);
   border-radius: 50%;
 }
@@ -54,7 +55,7 @@ img {
 /* Name & Designation */
 .section-Name {
   width: 100%;
-  margin-top: 11rem;
+  margin-top: 10rem;
   padding: 2rem;
   padding-left: 43%;
   position: absolute;
@@ -65,6 +66,7 @@ img {
 /* Name & Designation for Media*/
 
 .section-NameMedia {
+  text-align: center;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -75,21 +77,23 @@ img {
   background-color: var(--Red);
 }
 .name {
+  line-height: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 .designation {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
 /* About Me */
 .heading-AboutMe {
-  margin: 3.5rem 0rem 0.5rem;
+  margin: 3rem 0rem 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 1.3rem;
@@ -105,7 +109,7 @@ img {
 
 /* Contact Info */
 .contact-Sec {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 .contact-Info {
   display: flex;
@@ -128,7 +132,7 @@ img {
 }
 
 /* Languages Known */
-.languages {
+.languages-Sec {
   width: 70%;
   padding: 6px;
   border-radius: 25px;
@@ -142,6 +146,33 @@ img {
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+.languages-List {
+  width: 50%;
+  margin-bottom: 3rem;
+}
+.list {
+}
+
+/* Expertise Known */
+.expertise-Sec {
+  width: 70%;
+  padding: 6px;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--Red);
+  background-color: var(--text-white);
+  margin-bottom: 1rem;
+}
+.heading-Expertise {
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.expertise-list {
+  width: 50%;
+  margin-bottom: 3rem;
 }
 /* Resume Right Portion for Experience, Education & Skills */
 .right-Portion {
@@ -177,5 +208,19 @@ img {
   /* Resume Right Portion */
   .right-Portion {
     width: 100%;
+  }
+  /* Languages Known */
+  .languages-Sec {
+    width: 60%;
+  }
+  .languages-List {
+    width: 40%;
+  }
+  /* Expertise Known */
+  .expertise-Sec {
+    width: 60%;
+  }
+  .expertise-list {
+    width: 40%;
   }
 }
