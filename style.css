@@ -107,7 +107,8 @@ img {
   display: flex;
 }
 .info-Icon {
-  color: var(--text-white);
+}
+.info-Text {
 }
 
 /* Resume Right Portion for Experience, Education & Skills */
