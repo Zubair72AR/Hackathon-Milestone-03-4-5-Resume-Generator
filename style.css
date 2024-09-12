@@ -3,8 +3,8 @@
 :root {
   --Red: crimson;
   --Dark: #222a35;
-  --text-onDark: white;
-  --text-onLight: gray;
+  --text-white: white;
+  --text-dark: gray;
 }
 
 * {
@@ -22,17 +22,19 @@ body {
 
 /* Resume Generator */
 .generate-Resume {
+  position: relative;
   max-width: 900px;
   display: flex;
-  margin-top: 30px;
+  margin-top: 2rem;
   background-color: white;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Resume Left Portion for About Me, Personal Info, Languages ETC. */
 .left-Portion {
+  color: var(--text-white);
   width: 35%;
-  margin-left: 30px;
+  margin-left: 2rem;
   background-color: var(--Dark);
   display: flex;
   flex-direction: column;
@@ -42,14 +44,70 @@ body {
 
 /* Profile Image */
 img {
-  width: 250px;
-  margin-top: 80px;
+  z-index: 9999;
+  width: 80%;
+  margin-top: 8rem;
   border: 3px solid var(--Red);
   border-radius: 50%;
 }
 
 /* Name & Designation */
 .section-Name {
+  width: 100%;
+  margin-top: 11rem;
+  padding: 2rem;
+  padding-left: 43%;
+  position: absolute;
+  background-color: var(--Red);
+  color: var(--text-white);
+}
+
+/* Name & Designation for Media*/
+.section-NameMedia {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 3rem 1.5rem;
+  background-color: var(--Red);
+}
+.name {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.designation {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/* About Me */
+.heading-AboutMe {
+  margin: 3rem 0rem 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.para-AboutMe {
+  width: 80%;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+/* Contact Info */
+.contact-Info {
+  display: flex;
+}
+.info-Icon {
+  color: var(--text-white);
 }
 
 /* Resume Right Portion for Experience, Education & Skills */
@@ -67,13 +125,20 @@ img {
 
   /* Resume Left Portion */
   .left-Portion {
-    width: 80%;
+    width: 85%;
     margin: 0px auto;
   }
 
   /* Profile Image */
   img {
     width: 70%;
+  }
+  /* Name & Designation */
+  .section-Name {
+    display: none;
+  }
+  .section-NameMedia {
+    display: flex;
   }
 
   /* Resume Right Portion */
