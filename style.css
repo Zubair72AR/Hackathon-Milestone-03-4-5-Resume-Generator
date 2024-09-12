@@ -105,12 +105,12 @@ img {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 300;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 
 /* Contact Info */
 .contact-Sec {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .contact-Info {
   display: flex;
@@ -150,7 +150,7 @@ img {
 }
 .languages-List {
   width: 50%;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .list {
   list-style-type: square;
