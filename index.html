@@ -5,9 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
   <body>
-    <h1>Resume Generator</h1>
+    <!-- Resume Output -->
+    <div class="generateResume">
+      <!-- Resume Left Portion for About Me, Personal Info, Languages ETC. -->
+      <div class="leftPortion">
+        <!-- Profile Image -->
+        <img src="" alt="Profile Image" />
+
+        <!-- Name & Designation -->
+        <div class="name">
+          <h1 class="firstName">Zubair <span class="lastName">Ahmed</span></h1>
+          <h3 class="Designation">Web & Graphics Designer</h3>
+        </div>
+
+        <!-- About Me -->
+        <h4 class="aboutMeHead">About Me</h4>
+        <p class="aboutMePara">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
+          exercitationem, ipsam sit, illo aliquam officia earum autem ad
+          nesciunt rem, sed necessitatibus beatae soluta nobis veritatis.
+          Voluptas repudiandae harum repellendus!
+        </p>
+
+        <!-- Contact Info -->
+        <div class="contactInfo">
+          <div class="infoIcon"><i class="fa-solid fa-phone"></i></div>
+          <p class="infoText">+92 333 123 4567</p>
+        </div>
+
+        <div class="contactInfo">
+          <div class="infoIcon"><i class="fa-solid fa-envelope"></i></div>
+          <p class="infoText">youremail123@gmail.com</p>
+        </div>
+
+        <div class="contactInfo"></div>
+          <div class="infoIcon"><i class="fa-solid fa-location-dot"></i></div>
+          <p class="infoText">Karachi, Sindh - Pakistan</p>
+        </div>
+
+        <!-- Contact Info -->
+      </div>
+      <!-- Resume Right Portion for Experience, Education & Skills -->
+      <div class="rightPortion"></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
