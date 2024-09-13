@@ -47,7 +47,7 @@ body {
 img {
   z-index: 9999;
   width: 80%;
-  margin-top: 6rem;
+  margin-top: 5rem;
   border: 3px solid var(--Red);
   border-radius: 50%;
 }
@@ -55,7 +55,7 @@ img {
 /* Name & Designation */
 .section-Name {
   width: 100%;
-  margin-top: 9rem;
+  margin-top: 8.5rem;
   padding: 2rem;
   padding-left: 43%;
   position: absolute;
@@ -64,7 +64,7 @@ img {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Name & Designation for Media*/
+/* Name & Designation for Media Query */
 
 .section-NameMedia {
   text-align: center;
@@ -287,6 +287,12 @@ img {
 }
 
 /* Responsive Setup */
+@media screen and (max-width: 800px) {
+  /* Name & Designation */
+  .section-Name {
+    margin-top: 7.5rem;
+  }
+}
 @media screen and (max-width: 700px) {
   /* Resume Generator */
   .generate-Resume {
@@ -295,7 +301,7 @@ img {
 
   /* Resume Left Portion */
   .left-Portion {
-    width: 85%;
+    width: 90%;
     margin: 0px auto;
   }
 
