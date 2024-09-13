@@ -108,7 +108,7 @@
           />
 
           <!-- Languages Known Section -->
-          <div class="form-Sec">
+          <div class="form-Sec" id="language-Sec">
             <!-- Input Section Heading -->
             <h3 class="input-Heading">Languages Known</h3>
             <!-- Language Input -->
@@ -122,7 +122,13 @@
               required
             />
             <!-- Add More Language Button -->
-            <button class="add-Button" id="add-Language">Add +</button>
+            <button
+              onclick="addLanguageButton()"
+              class="add-Button"
+              id="add-Language-Btn"
+            >
+              Add +
+            </button>
           </div>
           <!-- Expertise Section -->
           <div class="form-Sec">
@@ -139,7 +145,7 @@
               required
             />
             <!-- Add More Expertise Button -->
-            <button class="add-Button" id="add-Expertise">Add +</button>
+            <button class="add-Button" id="add-Expertise-Btn">Add +</button>
           </div>
         </div>
         <div class="form-Sec">
@@ -177,7 +183,7 @@
               ></textarea>
             </div>
             <!-- Add More Experience Button -->
-            <button class="add-Button" id="add-Experience">Add +</button>
+            <button class="add-Button" id="add-Experience-Btn">Add +</button>
           </div>
 
           <!-- Education Section -->
@@ -215,7 +221,7 @@
               />
             </div>
             <!-- Add More Education Button -->
-            <button class="add-Button" id="add-Education">Add +</button>
+            <button class="add-Button" id="add-Education-Btn">Add +</button>
           </div>
 
           <!-- Skills Section -->
@@ -233,7 +239,7 @@
               required
             />
             <!-- Add More Skill Button -->
-            <button class="add-Button" id="add-Skill">Add +</button>
+            <button class="add-Button" id="add-Skill-Btn">Add +</button>
           </div>
         </div>
       </form>
