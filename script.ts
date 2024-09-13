@@ -11,7 +11,7 @@ function addLanguageButton() {
   let addLanBtn = document.createElement("input");
   // New Attributes for Created Input
   addLanBtn.setAttribute("type", "text");
-  addLanBtn.setAttribute("id", "language-Input");
+  addLanBtn.setAttribute("id", `language-Input-${delAddBtn}`);
   addLanBtn.classList.add("form-input");
   addLanBtn.setAttribute("placeholder", "Enter Here");
   addLanBtn.setAttribute("value", "");
