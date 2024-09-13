@@ -30,7 +30,6 @@
           <label for="fullName-Input" class="input-Label">Full Name</label>
           <input
             type="text"
-            name="fullName-Input"
             id="fullName-Input"
             class="form-input"
             onfocus=" value=  '' "
@@ -42,7 +41,6 @@
           <label for="designation-Input" class="input-Label">Designation</label>
           <input
             type="text"
-            name="designation-Input"
             id="designation-Input"
             class="form-input"
             onfocus=" value=  '' "
@@ -56,7 +54,6 @@
           >
           <input
             type="file"
-            name="profileImage-Input"
             id="profileImage-Input"
             class="form-input"
             accept="Image/png, Image/jpeg"
@@ -66,7 +63,6 @@
           <!-- About Me Text Area-->
           <label for="aboutMe-Input" class="input-Label">About Me</label>
           <textarea
-            name="aboutMe-Input"
             id="aboutMe-Input"
             class="form-input"
             rows="3"
@@ -77,7 +73,6 @@
           <label for="phone-Input" class="input-Label">Phone Number</label>
           <input
             type="tel"
-            name="phone-Input"
             id="phone-Input"
             class="form-input"
             onfocus=" value=  '' "
@@ -88,7 +83,6 @@
           <label for="email-Input" class="input-Label">Email</label>
           <input
             type="email"
-            name="email-Input"
             id="email-Input"
             class="form-input"
             onfocus=" value=  '' "
@@ -99,7 +93,6 @@
           <label for="address-Input" class="input-Label">Address</label>
           <input
             type="text"
-            name="address-Input"
             id="address-Input"
             class="form-input"
             onfocus=" value=  '' "
@@ -114,7 +107,6 @@
             <!-- Language Input -->
             <input
               type="text"
-              name="language-Input"
               id="language-Input"
               class="form-input"
               placeholder="Enter Here"
@@ -129,6 +121,13 @@
             >
               Add +
             </button>
+            <button
+              onclick="delLanguageButton()"
+              class="del-Button"
+              id="del-Language-Btn"
+            >
+              Delete
+            </button>
           </div>
           <!-- Expertise Section -->
           <div class="form-Sec">
@@ -137,7 +136,6 @@
             <!-- Expertise Input -->
             <input
               type="text"
-              name="expertise-Input"
               id="expertise-Input"
               class="form-input"
               placeholder="Enter Here"
@@ -157,7 +155,6 @@
             <div class="experience-Sec">
               <input
                 type="text"
-                name="experiencePosition-Input"
                 id="experiencePosition-Input"
                 class="form-input"
                 placeholder="Enter your position title here"
@@ -166,7 +163,6 @@
               />
               <input
                 type="text"
-                name="experienceCompYear-Input"
                 id="experienceCompYear-Input"
                 class="form-input"
                 placeholder="Company Name / Jan 2020 - Dec 2021"
@@ -174,7 +170,6 @@
                 required
               />
               <textarea
-                name="experiencePara-Input"
                 id="experiencePara-Input"
                 class="form-input"
                 rows="3"
@@ -194,7 +189,6 @@
             <div class="education-Sec">
               <input
                 type="text"
-                name="educationInstitute-Input"
                 id="educationInstitute-Input"
                 class="form-input"
                 placeholder="Name of Institute"
@@ -203,7 +197,6 @@
               />
               <input
                 type="text"
-                name="educationDegree-Input"
                 id="educationDegree-Input"
                 class="form-input"
                 placeholder="Enter Degree"
@@ -212,7 +205,6 @@
               />
               <input
                 type="text"
-                name="educationYear-Input"
                 id="educationYear-Input"
                 class="form-input"
                 placeholder="Jan 2020 - Dec 2021"
@@ -231,7 +223,6 @@
             <!-- Skills Input -->
             <input
               type="text"
-              name="skills-Input"
               id="skills-Input"
               class="form-input"
               placeholder="Enter Here"
@@ -261,14 +252,12 @@
           type="color"
           class="color-Styling"
           id="Color-01"
-          name="Color-01"
           value="#dc143c"
         />
         <input
           type="color"
           class="color-Styling"
           id="Color-02"
-          name="Color-02"
           value="#222a35"
         />
       </div>

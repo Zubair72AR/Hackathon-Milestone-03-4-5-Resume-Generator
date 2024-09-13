@@ -116,6 +116,26 @@
   background-color: var(--text-white);
   color: var(--Red-Color);
 }
+/* Delete Button Styling */
+.del-Button {
+  border: none;
+  border: 1px solid var(--Dark-Color);
+  background-color: var(--Dark-Color);
+  padding: 0.4rem 1.2rem;
+  border-radius: 25px;
+  color: var(--text-white);
+  font-weight: 500;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+}
+.del-Button:hover {
+  background-color: var(--text-white);
+  color: var(--Dark-Color);
+}
+/* Delete button Display none */
+#del-Language-Btn {
+  display: none;
+}
 
 /* Buttons of Generating Download Link */
 .buttons-Gen-Down-Link {
