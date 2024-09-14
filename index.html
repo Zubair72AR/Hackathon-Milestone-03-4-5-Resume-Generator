@@ -296,11 +296,17 @@
       <!-- Buttons of Generating Download Link -->
       <div class="buttons-Gen-Down-Link">
         <!-- Button for Generating Resume -->
-        <button class="buttons" id="Generate-Resume">Generate Resume</button>
+        <button onclick="generateResume()" class="buttons" id="Generate-Resume">
+          Generate Resume
+        </button>
         <!-- Button for Downloading PDF -->
-        <button class="buttons" id="Download-PDF">Download PDF</button>
+        <button onclick="downloadPDF()" class="buttons" id="Download-PDF">
+          Download PDF
+        </button>
         <!-- Button for Creating Sharable Link -->
-        <button class="buttons" id="Share-Link">Share Link</button>
+        <button onclick="shareLink()" class="buttons" id="Share-Link">
+          Share Link
+        </button>
       </div>
 
       <!-- Customize Colors -->
@@ -321,5 +327,6 @@
       </div>
     </main>
     <script src="script.js"></script>
+    <script src="genresume.js"></script>
   </body>
 </html>
