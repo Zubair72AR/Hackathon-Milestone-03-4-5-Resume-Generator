@@ -85,7 +85,6 @@ function addSkillsBtn() {
     if (delAddBtnSkill == 1) {
         delSkillButton.style.display = "inline-block";
     }
-    console.log(delAddBtnSkill);
 }
 // Deleting inputs if user created more then requirement
 function delSkillBtn() {
@@ -99,10 +98,13 @@ function delSkillBtn() {
 // Add+ More Input for Education
 let addEducButton = document.querySelector("#add-Education-Btn");
 let delEducButton = document.querySelector("#del-Education-Btn");
-let delAddBtnEducation = 0;
+let idEduSec = document.querySelector("#id-Edu-Sec");
+let delAddBtnEducation = 1;
 function addEducationBtn() {
+    // Creating New Div
     let div = document.createElement("div");
     div.setAttribute("id", "education-Sec");
+    // Creating HTML Element
     let addEducBtn = document.createElement("input");
     // New Attributes for Created Element
     addEducBtn.setAttribute("type", "text");
@@ -111,6 +113,7 @@ function addEducationBtn() {
     addEducBtn.setAttribute("placeholder", "Name of Institute");
     addEducBtn.setAttribute("value", "");
     addEducBtn.setAttribute("required", "");
+    // Creating HTML Element
     let addEducBtn2 = document.createElement("input");
     // New Attributes for Created Element
     addEducBtn2.setAttribute("type", "text");
@@ -119,6 +122,7 @@ function addEducationBtn() {
     addEducBtn2.setAttribute("placeholder", "Enter Degree");
     addEducBtn2.setAttribute("value", "");
     addEducBtn2.setAttribute("required", "");
+    // Creating HTML Element
     let addEducBtn3 = document.createElement("input");
     // New Attributes for Created Element
     addEducBtn3.setAttribute("type", "text");
@@ -127,40 +131,25 @@ function addEducationBtn() {
     addEducBtn3.setAttribute("placeholder", "Jan 2020 - Dec 2021");
     addEducBtn3.setAttribute("value", "");
     addEducBtn3.setAttribute("required", "");
+    // Inserting Above Created Elements Inside Div
     div.appendChild(addEducBtn);
     div.appendChild(addEducBtn2);
     div.appendChild(addEducBtn3);
-    //div.innerHTML = `${addEducBtn} ${addEducBtn2}`;
+    // Given Position where to be Appear
     addEducButton.before(div);
+    // Increment for Managing Delete Button
+    delAddBtnEducation++;
+    // Show Delete Button
+    if (delAddBtnEducation == 2) {
+        delEducButton.style.display = "inline-block";
+    }
 }
-/*
-function addEducationBtn() {
-  // Creating HTML Element
-  let addEducBtn = document.createElement("input");
-  // New Attributes for Created Element
-  addEducBtn.setAttribute("type", "text");
-  addEducBtn.setAttribute("id", "educationInstitute-Input");
-  addEducBtn.classList.add("form-input");
-  addEducBtn.setAttribute("placeholder", "Name of Institute");
-  addEducBtn.setAttribute("value", "");
-  addEducBtn.setAttribute("required", "");
-  // Inserting Input
-  educationDiv.append(addEducBtn);
-  // Increment for Managing Delete Button
-  delAddBtnEducation++;
-  // Show Delete Button
-  if (delAddBtnEducation == 1) {
-    delEducButton.style.display = "inline-block";
-  }
-}
-
 // Deleting inputs if user created more then requirement
 function delEducationBtn() {
-  // Removing last Element
-  educationDiv.removeChild(educationDiv.children[`${delAddBtnEducation--}`]);
-  // Hide Delete Button
-  if (delAddBtnEducation == 0) {
-    delEducButton.style.display = "none";
-  }
+    // Removing last Element
+    idEduSec.removeChild(idEduSec.children[`${delAddBtnEducation--}`]);
+    // Hide Delete Button
+    if (delAddBtnEducation == 1) {
+        delEducButton.style.display = "none";
+    }
 }
-*/
