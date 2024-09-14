@@ -32,7 +32,7 @@ function delLanguageBtn() {
     }
 }
 // Add+ More Input for Expertise
-let ExpertDiv = document.querySelector("#expertise-Div");
+let expertDiv = document.querySelector("#expertise-Div");
 let delExpertBtn = document.querySelector("#del-Expert-Btn");
 let delAddBtnExpert = 0;
 function addExpertBtn() {
@@ -46,7 +46,7 @@ function addExpertBtn() {
     addExpeBtn.setAttribute("placeholder", "Enter Here");
     addExpeBtn.setAttribute("value", "");
     // Inserting Input
-    ExpertDiv.append(addExpeBtn);
+    expertDiv.append(addExpeBtn);
     // Increment for Managing Delete Button
     delAddBtnExpert++;
     // Show Delete Button
@@ -57,9 +57,42 @@ function addExpertBtn() {
 // Deleting inputs if user created more then requirement
 function delExpertiseBtn() {
     // Removing last Element
-    ExpertDiv.removeChild(ExpertDiv.children[`${delAddBtnExpert--}`]);
+    expertDiv.removeChild(expertDiv.children[`${delAddBtnExpert--}`]);
     // Hide Delete Button
     if (delAddBtnExpert == 0) {
         delExpertBtn.style.display = "none";
+    }
+}
+// Add+ More Input for Skills
+let skillDiv = document.querySelector("#skill-div");
+let delSkillButton = document.querySelector("#del-Skill-Btn");
+let delAddBtnSkill = 0;
+function addSkillsBtn() {
+    // Creating HTML Element
+    let addSkillButton = document.createElement("input");
+    // New Attributes for Created Element
+    addSkillButton.setAttribute("type", "text");
+    addSkillButton.setAttribute("id", "skills-Input");
+    addSkillButton.classList.add("form-input");
+    addSkillButton.setAttribute("required", "");
+    addSkillButton.setAttribute("placeholder", "Enter Here");
+    addSkillButton.setAttribute("value", "");
+    // Inserting Input
+    skillDiv.append(addSkillButton);
+    // Increment for Managing Delete Button
+    delAddBtnSkill++;
+    // Show Delete Button
+    if (delAddBtnSkill == 1) {
+        delSkillButton.style.display = "inline-block";
+    }
+    console.log(delAddBtnSkill);
+}
+// Deleting inputs if user created more then requirement
+function delSkillBtn() {
+    // Removing last Element
+    skillDiv.removeChild(skillDiv.children[`${delAddBtnSkill--}`]);
+    // Hide Delete Button
+    if (delAddBtnSkill == 0) {
+        delSkillButton.style.display = "none";
     }
 }

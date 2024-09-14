@@ -238,16 +238,31 @@
             <!-- Input Section Heading -->
             <h3 class="input-Heading">Skills</h3>
             <!-- Skills Input -->
-            <input
-              type="text"
-              id="skills-Input"
-              class="form-input"
-              placeholder="Enter Here"
-              value=""
-              required
-            />
+            <div id="skill-div">
+              <input
+                type="text"
+                id="skills-Input"
+                class="form-input"
+                placeholder="Enter Here"
+                value=""
+                required
+              />
+            </div>
             <!-- Add More Skill Button -->
-            <button class="add-Button" id="add-Skill-Btn">Add +</button>
+            <button
+              onclick="addSkillsBtn()"
+              class="add-Button"
+              id="add-Skill-Btn"
+            >
+              Add +
+            </button>
+            <button
+              onclick="delSkillBtn()"
+              class="del-Button"
+              id="del-Skill-Btn"
+            >
+              Delete
+            </button>
           </div>
         </div>
       </form>

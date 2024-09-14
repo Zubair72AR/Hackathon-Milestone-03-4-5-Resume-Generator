@@ -136,6 +136,12 @@
 #del-Lang-Btn {
   display: none;
 }
+#del-Expert-Btn {
+  display: none;
+}
+#del-Skill-Btn {
+  display: none;
+}
 
 /* Buttons of Generating Download Link */
 .buttons-Gen-Down-Link {
