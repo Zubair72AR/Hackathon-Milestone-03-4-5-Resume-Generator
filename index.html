@@ -165,7 +165,7 @@
         </div>
         <div class="form-Sec">
           <!-- Experience Section -->
-          <div class="form-Sec">
+          <div class="form-Sec" id="id-Experi-Sec">
             <!-- Input Section Heading -->
             <h3 class="input-Heading">Experience</h3>
             <!-- Experience Input -->
@@ -195,7 +195,20 @@
               ></textarea>
             </div>
             <!-- Add More Experience Button -->
-            <button class="add-Button" id="add-Experience-Btn">Add +</button>
+            <button
+              onclick="addExperienceBtn()"
+              class="add-Button"
+              id="add-Experi-Btn"
+            >
+              Add +
+            </button>
+            <button
+              onclick="delExperienceBtn()"
+              class="del-Button"
+              id="del-Experi-Btn"
+            >
+              Delete
+            </button>
           </div>
 
           <!-- Education Section -->
