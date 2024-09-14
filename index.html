@@ -101,30 +101,32 @@
           />
 
           <!-- Languages Known Section -->
-          <div class="form-Sec" id="language-Sec">
+          <div class="form-Sec">
             <!-- Input Section Heading -->
             <h3 class="input-Heading">Languages Known</h3>
             <!-- Language Input -->
-            <input
-              type="text"
-              id="language-Input"
-              class="form-input"
-              placeholder="Enter Here"
-              value=""
-              required
-            />
+            <div id="lang-Div">
+              <input
+                type="text"
+                id="language-Input"
+                class="form-input"
+                placeholder="Enter Here"
+                value=""
+                required
+              />
+            </div>
             <!-- Add More Language Button -->
             <button
-              onclick="addLanguageButton()"
+              onclick="addLanguageBtn()"
               class="add-Button"
-              id="add-Language-Btn"
+              id="add-Lang-Btn"
             >
               Add +
             </button>
             <button
-              onclick="delLanguageButton()"
+              onclick="delLanguageBtn()"
               class="del-Button"
-              id="del-Language-Btn"
+              id="del-Lang-Btn"
             >
               Delete
             </button>
@@ -134,16 +136,31 @@
             <!-- Input Section Heading -->
             <h3 class="input-Heading">Expertise</h3>
             <!-- Expertise Input -->
-            <input
-              type="text"
-              id="expertise-Input"
-              class="form-input"
-              placeholder="Enter Here"
-              value=""
-              required
-            />
+            <div id="expertise-Div">
+              <input
+                type="text"
+                id="expertise-Input"
+                class="form-input"
+                placeholder="Enter Here"
+                value=""
+                required
+              />
+            </div>
             <!-- Add More Expertise Button -->
-            <button class="add-Button" id="add-Expertise-Btn">Add +</button>
+            <button
+              onclick="addExpertBtn()"
+              class="add-Button"
+              id="add-Expertise-Btn"
+            >
+              Add +
+            </button>
+            <button
+              onclick="delExpertiseBtn()"
+              class="del-Button"
+              id="del-Expert-Btn"
+            >
+              Delete
+            </button>
           </div>
         </div>
         <div class="form-Sec">
