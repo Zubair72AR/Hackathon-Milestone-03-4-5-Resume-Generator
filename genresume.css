@@ -7,26 +7,13 @@
   --text-dark: gray;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  background-color: gray;
-}
-
 /* Resume Output */
 .generate-Resume {
   position: relative;
   max-width: 900px;
   min-height: 1100px;
   display: flex;
-  margin-top: 2rem;
+  margin: 2rem auto;
   background-color: white;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
