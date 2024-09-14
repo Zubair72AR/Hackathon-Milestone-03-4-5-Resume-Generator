@@ -68,41 +68,6 @@ function delExpertiseBtn() {
   }
 }
 
-// Add+ More Input for Skills
-let skillDiv = document.querySelector("#skill-div") as HTMLElement;
-let delSkillButton = document.querySelector("#del-Skill-Btn") as HTMLElement;
-let delAddBtnSkill = 0;
-
-function addSkillsBtn() {
-  // Creating HTML Element
-  let addSkillButton = document.createElement("input");
-  // New Attributes for Created Element
-  addSkillButton.setAttribute("type", "text");
-  addSkillButton.setAttribute("id", "skills-Input");
-  addSkillButton.classList.add("form-input");
-  addSkillButton.setAttribute("required", "");
-  addSkillButton.setAttribute("placeholder", "Enter Here");
-  addSkillButton.setAttribute("value", "");
-  // Inserting Input
-  skillDiv.append(addSkillButton);
-  // Increment for Managing Delete Button
-  delAddBtnSkill++;
-  // Show Delete Button
-  if (delAddBtnSkill == 1) {
-    delSkillButton.style.display = "inline-block";
-  }
-}
-
-// Deleting inputs if user created more then requirement
-function delSkillBtn() {
-  // Removing last Element
-  skillDiv.removeChild(skillDiv.children[`${delAddBtnSkill--}`]);
-  // Hide Delete Button
-  if (delAddBtnSkill == 0) {
-    delSkillButton.style.display = "none";
-  }
-}
-
 // Add+ More Input for Experience
 let addExperiBtn = document.querySelector("#add-Experi-Btn") as HTMLElement;
 let delExperiBtn = document.querySelector("#del-Experi-Btn") as HTMLElement;
@@ -152,7 +117,7 @@ function addExperienceBtn() {
   divExperi.appendChild(addExperiElem3);
 
   // Given Position where to be Appear
-  delExperiBtn.before(divExperi);
+  addExperiBtn.before(divExperi);
 
   // Increment for Managing Delete Button
   delAddBtnExperi++;
@@ -236,5 +201,40 @@ function delEducationBtn() {
   // Hide Delete Button
   if (delAddBtnEducation == 1) {
     delEducButton.style.display = "none";
+  }
+}
+
+// Add+ More Input for Skills
+let skillDiv = document.querySelector("#skill-div") as HTMLElement;
+let delSkillButton = document.querySelector("#del-Skill-Btn") as HTMLElement;
+let delAddBtnSkill = 0;
+
+function addSkillsBtn() {
+  // Creating HTML Element
+  let addSkillButton = document.createElement("input");
+  // New Attributes for Created Element
+  addSkillButton.setAttribute("type", "text");
+  addSkillButton.setAttribute("id", "skills-Input");
+  addSkillButton.classList.add("form-input");
+  addSkillButton.setAttribute("required", "");
+  addSkillButton.setAttribute("placeholder", "Enter Here");
+  addSkillButton.setAttribute("value", "");
+  // Inserting Input
+  skillDiv.append(addSkillButton);
+  // Increment for Managing Delete Button
+  delAddBtnSkill++;
+  // Show Delete Button
+  if (delAddBtnSkill == 1) {
+    delSkillButton.style.display = "inline-block";
+  }
+}
+
+// Deleting inputs if user created more then requirement
+function delSkillBtn() {
+  // Removing last Element
+  skillDiv.removeChild(skillDiv.children[`${delAddBtnSkill--}`]);
+  // Hide Delete Button
+  if (delAddBtnSkill == 0) {
+    delSkillButton.style.display = "none";
   }
 }
