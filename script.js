@@ -97,11 +97,12 @@ function delSkillBtn() {
     }
 }
 // Add+ More Input for Education
-let educationDiv = document.querySelector("#education-Sec");
+let addEducButton = document.querySelector("#add-Education-Btn");
 let delEducButton = document.querySelector("#del-Education-Btn");
 let delAddBtnEducation = 0;
 function addEducationBtn() {
-    // Creating HTML Element
+    let div = document.createElement("div");
+    div.setAttribute("id", "education-Sec");
     let addEducBtn = document.createElement("input");
     // New Attributes for Created Element
     addEducBtn.setAttribute("type", "text");
@@ -110,21 +111,56 @@ function addEducationBtn() {
     addEducBtn.setAttribute("placeholder", "Name of Institute");
     addEducBtn.setAttribute("value", "");
     addEducBtn.setAttribute("required", "");
-    // Inserting Input
-    educationDiv.append(addEducBtn);
-    // Increment for Managing Delete Button
-    delAddBtnEducation++;
-    // Show Delete Button
-    if (delAddBtnEducation == 1) {
-        delEducButton.style.display = "inline-block";
-    }
+    let addEducBtn2 = document.createElement("input");
+    // New Attributes for Created Element
+    addEducBtn2.setAttribute("type", "text");
+    addEducBtn2.setAttribute("id", "educationDegree-Input");
+    addEducBtn2.classList.add("form-input");
+    addEducBtn2.setAttribute("placeholder", "Enter Degree");
+    addEducBtn2.setAttribute("value", "");
+    addEducBtn2.setAttribute("required", "");
+    let addEducBtn3 = document.createElement("input");
+    // New Attributes for Created Element
+    addEducBtn3.setAttribute("type", "text");
+    addEducBtn3.setAttribute("id", "educationYear-Input");
+    addEducBtn3.classList.add("form-input");
+    addEducBtn3.setAttribute("placeholder", "Jan 2020 - Dec 2021");
+    addEducBtn3.setAttribute("value", "");
+    addEducBtn3.setAttribute("required", "");
+    div.appendChild(addEducBtn);
+    div.appendChild(addEducBtn2);
+    div.appendChild(addEducBtn3);
+    //div.innerHTML = `${addEducBtn} ${addEducBtn2}`;
+    addEducButton.before(div);
 }
+/*
+function addEducationBtn() {
+  // Creating HTML Element
+  let addEducBtn = document.createElement("input");
+  // New Attributes for Created Element
+  addEducBtn.setAttribute("type", "text");
+  addEducBtn.setAttribute("id", "educationInstitute-Input");
+  addEducBtn.classList.add("form-input");
+  addEducBtn.setAttribute("placeholder", "Name of Institute");
+  addEducBtn.setAttribute("value", "");
+  addEducBtn.setAttribute("required", "");
+  // Inserting Input
+  educationDiv.append(addEducBtn);
+  // Increment for Managing Delete Button
+  delAddBtnEducation++;
+  // Show Delete Button
+  if (delAddBtnEducation == 1) {
+    delEducButton.style.display = "inline-block";
+  }
+}
+
 // Deleting inputs if user created more then requirement
 function delEducationBtn() {
-    // Removing last Element
-    educationDiv.removeChild(educationDiv.children[`${delAddBtnEducation--}`]);
-    // Hide Delete Button
-    if (delAddBtnEducation == 0) {
-        delEducButton.style.display = "none";
-    }
+  // Removing last Element
+  educationDiv.removeChild(educationDiv.children[`${delAddBtnEducation--}`]);
+  // Hide Delete Button
+  if (delAddBtnEducation == 0) {
+    delEducButton.style.display = "none";
+  }
 }
+*/
