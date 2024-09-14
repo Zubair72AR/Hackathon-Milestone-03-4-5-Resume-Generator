@@ -203,7 +203,7 @@
             <!-- Input Section Heading -->
             <h3 class="input-Heading">Education</h3>
             <!-- Education Input -->
-            <div class="education-Sec">
+            <div id="education-Sec">
               <input
                 type="text"
                 id="educationInstitute-Input"
@@ -230,7 +230,20 @@
               />
             </div>
             <!-- Add More Education Button -->
-            <button class="add-Button" id="add-Education-Btn">Add +</button>
+            <button
+              onclick="addEducationBtn()"
+              class="add-Button"
+              id="add-Education-Btn"
+            >
+              Add +
+            </button>
+            <button
+              onclick="delEducationBtn()"
+              class="del-Button"
+              id="del-Education-Btn"
+            >
+              Delete
+            </button>
           </div>
 
           <!-- Skills Section -->
@@ -294,6 +307,6 @@
         />
       </div>
     </main>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

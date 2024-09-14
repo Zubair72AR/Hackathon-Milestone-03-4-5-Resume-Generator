@@ -96,3 +96,35 @@ function delSkillBtn() {
         delSkillButton.style.display = "none";
     }
 }
+// Add+ More Input for Education
+let educationDiv = document.querySelector("#education-Sec");
+let delEducButton = document.querySelector("#del-Education-Btn");
+let delAddBtnEducation = 0;
+function addEducationBtn() {
+    // Creating HTML Element
+    let addEducBtn = document.createElement("input");
+    // New Attributes for Created Element
+    addEducBtn.setAttribute("type", "text");
+    addEducBtn.setAttribute("id", "educationInstitute-Input");
+    addEducBtn.classList.add("form-input");
+    addEducBtn.setAttribute("placeholder", "Name of Institute");
+    addEducBtn.setAttribute("value", "");
+    addEducBtn.setAttribute("required", "");
+    // Inserting Input
+    educationDiv.append(addEducBtn);
+    // Increment for Managing Delete Button
+    delAddBtnEducation++;
+    // Show Delete Button
+    if (delAddBtnEducation == 1) {
+        delEducButton.style.display = "inline-block";
+    }
+}
+// Deleting inputs if user created more then requirement
+function delEducationBtn() {
+    // Removing last Element
+    educationDiv.removeChild(educationDiv.children[`${delAddBtnEducation--}`]);
+    // Hide Delete Button
+    if (delAddBtnEducation == 0) {
+        delEducButton.style.display = "none";
+    }
+}

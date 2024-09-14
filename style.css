@@ -142,6 +142,9 @@
 #del-Skill-Btn {
   display: none;
 }
+#del-Education-Btn {
+  display: none;
+}
 
 /* Buttons of Generating Download Link */
 .buttons-Gen-Down-Link {
