@@ -111,8 +111,8 @@ let delAddBtnExperi = 1;
 
 function addExperienceBtn() {
   // Creating New Div
-  let div = document.createElement("div");
-  div.setAttribute("id", "experience-Sec");
+  let divExperi = document.createElement("div");
+  divExperi.setAttribute("id", "experience-Sec");
 
   // Creating HTML Element 01
   let addExperiElem = document.createElement("input");
@@ -147,12 +147,12 @@ function addExperienceBtn() {
   addExperiElem3.setAttribute("required", "");
 
   // Inserting Above Created Elements Inside Div
-  div.appendChild(addExperiElem);
-  div.appendChild(addExperiElem2);
-  div.appendChild(addExperiElem3);
+  divExperi.appendChild(addExperiElem);
+  divExperi.appendChild(addExperiElem2);
+  divExperi.appendChild(addExperiElem3);
 
   // Given Position where to be Appear
-  addExperiBtn.before(div);
+  delExperiBtn.before(divExperi);
 
   // Increment for Managing Delete Button
   delAddBtnExperi++;
