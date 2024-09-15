@@ -270,6 +270,8 @@ function delSkillBtn() {
 /////////////////////////////////////////////////
 // Generating CV - Collecting Data from Input form into CV
 /////////////////////////////////////////////////
+
+let langList = document.querySelector("#lang-List") as HTMLElement;
 let skillGenResume = document.querySelector("#skillGenResume") as HTMLElement;
 let sectionEducation = document.querySelector("#eduGenResume") as HTMLElement;
 // General Function for Data Collecting
@@ -278,6 +280,18 @@ function dataTransfer(collect: string, provide: string) {
   let dataProvider = document.querySelector(`${provide}`) as HTMLInputElement;
   dataCollector.innerText = dataProvider.value;
 }
+/*
+function dataTransferLi(collectLi: string, provideLi: string) {
+  let dataCollectorLi = document.querySelector(`${collectLi}`) as HTMLElement;
+  let dataProviderLi = document.querySelector(
+    `${provideLi}`
+  ) as HTMLInputElement;
+
+  let createLi = document.createElement("li");
+
+  createLi = dataProviderLi.innerHTML;
+  collectLi.append(dataCollectorLi);
+}*/
 
 function generateResume() {
   /////////////////////////////////////////////////
@@ -295,44 +309,16 @@ function generateResume() {
   /////////////////////////////////////////////////
   // Languages Section Data Collecting
   /////////////////////////////////////////////////
-  ------------------------------------/////////dataTransfer("#lang-List", "#language-Input");
 
+  dataTransfer("#lang-Li", "#language-Input");
   // For Loop if More Inputs are created by User
-  for (let exp = 1; exp < delAddBtnExperi; exp++) {
-    // Creating Main Div
-    let divAddExp = document.createElement("div");
-    divAddExp.classList.add("add-Sec-Experience");
+  for (let lang = 1; lang < delAddBtnLang; lang++) {
+    let createLi = document.createElement("li");
+    createLi.setAttribute("id", `#lang-Li${lang}`);
 
-    // Creating HTML Data 01
-    let addDataExp = document.createElement("h5");
-    // Adding Class for Apply CSS Style
-    addDataExp.classList.add("title-Experience");
-    addDataExp.setAttribute("id", `title-Experience${exp}`);
+    langList.appendChild(createLi);
 
-    // Creating HTML Data 02
-    let addDataExp2 = document.createElement("p");
-    // Adding Class for Apply CSS Style
-    addDataExp2.classList.add("comp-Experience");
-    addDataExp2.setAttribute("id", `comp-Experience${exp}`);
-
-    // Creating HTML Data 03
-    let addDataExp3 = document.createElement("p");
-    // Adding Class for Apply CSS Style
-    addDataExp3.classList.add("para-Experience");
-    addDataExp3.setAttribute("id", `para-Experience${exp}`);
-
-    // Inserting Above Created Elements Inside Div
-    divAddExp.appendChild(addDataExp);
-    divAddExp.appendChild(addDataExp2);
-    divAddExp.appendChild(addDataExp3);
-
-    // Given Position where to be Appear
-    sectionEducation.before(divAddExp);
-
-    // Transferring Data if Created More
-    dataTransfer(`#title-Experience${exp}`, `#experiencePosition-Input${exp}`);
-    dataTransfer(`#comp-Experience${exp}`, `#experienceCompYear-Input${exp}`);
-    dataTransfer(`#para-Experience${exp}`, `#experiencePara-Input${exp}`);
+    dataTransfer(`#lang-Li${lang}`, `#language-Input${lang}`);
   }
 
   /////////////////////////////////////////////////
