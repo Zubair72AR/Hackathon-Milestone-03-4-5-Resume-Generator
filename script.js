@@ -133,7 +133,7 @@ function addEducationBtn() {
     let addEducElement = document.createElement("input");
     // New Attributes for Created Element
     addEducElement.setAttribute("type", "text");
-    addEducElement.setAttribute("id", "educationInstitute-Input");
+    addEducElement.setAttribute("id", `educationInstitute-Input${delAddBtnEducation}`);
     addEducElement.classList.add("form-input");
     addEducElement.setAttribute("placeholder", "Name of Institute");
     addEducElement.setAttribute("value", "");
@@ -142,7 +142,7 @@ function addEducationBtn() {
     let addEducElement2 = document.createElement("input");
     // New Attributes for Created Element
     addEducElement2.setAttribute("type", "text");
-    addEducElement2.setAttribute("id", "educationDegree-Input");
+    addEducElement2.setAttribute("id", `educationDegree-Input${delAddBtnEducation}`);
     addEducElement2.classList.add("form-input");
     addEducElement2.setAttribute("placeholder", "Enter Degree");
     addEducElement2.setAttribute("value", "");
@@ -151,7 +151,7 @@ function addEducationBtn() {
     let addEducElement3 = document.createElement("input");
     // New Attributes for Created Element
     addEducElement3.setAttribute("type", "text");
-    addEducElement3.setAttribute("id", "educationYear-Input");
+    addEducElement3.setAttribute("id", `educationYear-Input${delAddBtnEducation}`);
     addEducElement3.classList.add("form-input");
     addEducElement3.setAttribute("placeholder", "Jan 2020 - Dec 2021");
     addEducElement3.setAttribute("value", "");
@@ -208,5 +208,53 @@ function delSkillBtn() {
     // Hide Delete Button
     if (delAddBtnSkill == 0) {
         delSkillButton.style.display = "none";
+    }
+}
+// Generating CV - Collecting Data from Input form into CV
+let skillGenResume = document.querySelector("#skillGenResume");
+// General Function for Data Collecting
+function dataTransfer(collect, provide) {
+    let dataCollector = document.querySelector(`${collect}`);
+    let dataProvider = document.querySelector(`${provide}`);
+    dataCollector.innerHTML = dataProvider.value;
+}
+function generateResume() {
+    dataTransfer(".name", "#fullName-Input");
+    dataTransfer(".designation", "#designation-Input");
+    dataTransfer(".para-AboutMe", "#aboutMe-Input");
+    dataTransfer(".phone", "#phone-Input");
+    dataTransfer(".envelope", "#email-Input");
+    dataTransfer(".location", "#address-Input");
+    dataTransfer(".institute-Education", "#educationInstitute-Input");
+    dataTransfer(".degree-Education", "#educationDegree-Input");
+    dataTransfer(".year-Education", "#educationYear-Input");
+    let edu = 0;
+    for (edu = 0; edu <= delAddBtnEducation - 1; edu++) {
+        let divAddEdu = document.createElement("div");
+        divAddEdu.classList.add("add-Sec-Education");
+        // Creating HTML Data 01
+        let addDataEdu = document.createElement("h5");
+        // Adding Class for Apply CSS Style
+        addDataEdu.classList.add("institute-Education");
+        addDataEdu.setAttribute("id", `institute-Education${edu}`);
+        // Creating HTML Data 02
+        let addDataEdu2 = document.createElement("p");
+        // Adding Class for Apply CSS Style
+        addDataEdu2.classList.add("degree-Education");
+        addDataEdu2.setAttribute("id", `degree-Education${edu}`);
+        // Creating HTML Data 03
+        let addDataEdu3 = document.createElement("p");
+        // Adding Class for Apply CSS Style
+        addDataEdu3.classList.add("year-Education");
+        addDataEdu3.setAttribute("id", `year-Education${edu}`);
+        // Inserting Above Created Elements Inside Div
+        divAddEdu.appendChild(addDataEdu);
+        divAddEdu.appendChild(addDataEdu2);
+        divAddEdu.appendChild(addDataEdu3);
+        // Given Position where to be Appear
+        skillGenResume.before(divAddEdu);
+        dataTransfer(`#institute-Education${edu}`, `#educationInstitute-Input${edu + 1}`);
+        dataTransfer(`#degree-Education${edu}`, `#educationDegree-Input${edu + 1}`);
+        dataTransfer(`#year-Education${edu}`, `#educationYear-Input${edu + 1}`);
     }
 }
