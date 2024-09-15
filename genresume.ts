@@ -12,18 +12,14 @@ function generateResume() {
   dataTransfer("envelope", "email-Input");
   dataTransfer("location", "address-Input");
 
-  let experiInput01 = document.querySelector(
-    "#experiencePosition-Input"
-  ) as HTMLElement;
+  let languageInput = document.querySelector("#language-Input") as HTMLElement;
   let str01 = "";
-  for (let e of experiInput01) {
-    str01 += `<h5> ${e.value}</h5>`;
+  for (let e of languageInput) {
+    str01 += `<li> ${e.value}</li>`;
   }
 
-  let experiOutput01 = document.querySelector(
-    ".title-Experience"
-  ) as HTMLElement;
-  experiOutput01.innerHTML = str01;
+  let langList = document.querySelector("#lang-List") as HTMLElement;
+  langList.innerHTML = str01;
 }
 
 /*
