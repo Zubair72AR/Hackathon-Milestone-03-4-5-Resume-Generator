@@ -316,7 +316,7 @@ function generateResume() {
     let createLi = document.createElement("li");
     createLi.setAttribute("id", `#lang-Li${lang}`);
 
-    langList.appendChild(langList.children[`${lang - 1}`]);
+    langList.appendChild(langList.children[`${lang + 1}`]);
 
     dataTransfer(`#lang-Li${lang}`, `#language-Input${lang}`);
   }
