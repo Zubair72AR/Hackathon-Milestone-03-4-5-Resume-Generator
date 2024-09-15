@@ -26,7 +26,6 @@
   background-color: var(--Dark);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
