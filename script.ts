@@ -280,18 +280,6 @@ function dataTransfer(collect: string, provide: string) {
   let dataProvider = document.querySelector(`${provide}`) as HTMLInputElement;
   dataCollector.innerText = dataProvider.value;
 }
-/*
-function dataTransferLi(collectLi: string, provideLi: string) {
-  let dataCollectorLi = document.querySelector(`${collectLi}`) as HTMLElement;
-  let dataProviderLi = document.querySelector(
-    `${provideLi}`
-  ) as HTMLInputElement;
-
-  let createLi = document.createElement("li");
-
-  createLi = dataProviderLi.innerHTML;
-  collectLi.append(dataCollectorLi);
-}*/
 
 function generateResume() {
   /////////////////////////////////////////////////
@@ -309,18 +297,24 @@ function generateResume() {
   /////////////////////////////////////////////////
   // Languages Section Data Collecting
   /////////////////////////////////////////////////
-
   dataTransfer("#lang-Li", "#language-Input");
+  delAddBtnLang--;
   // For Loop if More Inputs are created by User
-  for (let lang = 1; lang < delAddBtnLang; lang++) {
-    let createLi = document.createElement("li");
-    createLi.setAttribute("id", `#lang-Li${lang}`);
-
-    langList.appendChild(langList.children[`${lang + 1}`]);
-
-    dataTransfer(`#lang-Li${lang}`, `#language-Input${lang}`);
+  let lang = 1;
+  if (lang != delAddBtnLang) {
+    for (lang = 1; lang <= delAddBtnLang; lang++) {
+      // Creating Li
+      let createLi = document.createElement("li");
+      // Adding ID Attributes
+      createLi.setAttribute("id", `lang-Li${lang}`);
+      // Given Position where to be Appear
+      langList.append(createLi);
+      // Transferring Data if Created More
+      dataTransfer(`#lang-Li${lang}`, `#language-Input${lang}`);
+      console.log(delAddBtnLang);
+      console.log(lang);
+    }
   }
-
   /////////////////////////////////////////////////
   // Experience Section Data Collecting
   /////////////////////////////////////////////////
