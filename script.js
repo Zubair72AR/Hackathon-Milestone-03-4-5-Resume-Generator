@@ -4,13 +4,13 @@
 /////////////////////////////////////////////////
 let langDiv = document.querySelector("#lang-Div");
 let delLangBtn = document.querySelector("#del-Lang-Btn");
-let delAddBtnLang = 0;
+let delAddBtnLang = 1;
 function addLanguageBtn() {
     // Creating HTML Element
     let addLanBtn = document.createElement("input");
     // New Attributes for Created Element
     addLanBtn.setAttribute("type", "text");
-    addLanBtn.setAttribute("id", "language-Input");
+    addLanBtn.setAttribute("id", `language-Input${delAddBtnLang}`);
     addLanBtn.classList.add("form-input");
     addLanBtn.setAttribute("placeholder", "Enter Here");
     addLanBtn.setAttribute("value", "");
@@ -20,16 +20,17 @@ function addLanguageBtn() {
     // Increment for Managing Delete Button
     delAddBtnLang++;
     // Show Delete Button
-    if (delAddBtnLang == 1) {
+    if (delAddBtnLang == 2) {
         delLangBtn.style.display = "inline-block";
     }
 }
 // Deleting inputs if user created more then requirement
 function delLanguageBtn() {
     // Removing last Element
-    langDiv.removeChild(langDiv.children[`${delAddBtnLang--}`]);
+    langDiv.removeChild(langDiv.children[`${delAddBtnLang - 1}`]);
+    delAddBtnLang--;
     // Hide Delete Button
-    if (delAddBtnLang == 0) {
+    if (delAddBtnLang <= 1) {
         delLangBtn.style.display = "none";
     }
 }
@@ -38,13 +39,13 @@ function delLanguageBtn() {
 /////////////////////////////////////////////////
 let expertDiv = document.querySelector("#expertise-Div");
 let delExpertBtn = document.querySelector("#del-Expert-Btn");
-let delAddBtnExpert = 0;
+let delAddBtnExpert = 1;
 function addExpertBtn() {
     // Creating HTML Element
     let addExpeBtn = document.createElement("input");
     // New Attributes for Created Element
     addExpeBtn.setAttribute("type", "text");
-    addExpeBtn.setAttribute("id", "expertise-Input");
+    addExpeBtn.setAttribute("id", `expertise-Input${delAddBtnExpert}`);
     addExpeBtn.classList.add("form-input");
     addExpeBtn.setAttribute("required", "");
     addExpeBtn.setAttribute("placeholder", "Enter Here");
@@ -54,16 +55,17 @@ function addExpertBtn() {
     // Increment for Managing Delete Button
     delAddBtnExpert++;
     // Show Delete Button
-    if (delAddBtnExpert == 1) {
+    if (delAddBtnExpert == 2) {
         delExpertBtn.style.display = "inline-block";
     }
 }
 // Deleting inputs if user created more then requirement
 function delExpertiseBtn() {
     // Removing last Element
-    expertDiv.removeChild(expertDiv.children[`${delAddBtnExpert--}`]);
+    expertDiv.removeChild(expertDiv.children[`${delAddBtnExpert - 1}`]);
+    delAddBtnExpert--;
     // Hide Delete Button
-    if (delAddBtnExpert == 0) {
+    if (delAddBtnExpert <= 1) {
         delExpertBtn.style.display = "none";
     }
 }
@@ -122,7 +124,7 @@ function delExperienceBtn() {
     // Removing Element
     idExperiSec.removeChild(idExperiSec.children[`${delAddBtnExperi--}`]);
     // Hide Delete Button
-    if (delAddBtnExperi == 1) {
+    if (delAddBtnExperi <= 1) {
         delExperiBtn.style.display = "none";
     }
 }
@@ -182,7 +184,7 @@ function delEducationBtn() {
     // Removing Element
     idEduSec.removeChild(idEduSec.children[`${delAddBtnEducation--}`]);
     // Hide Delete Button
-    if (delAddBtnEducation == 1) {
+    if (delAddBtnEducation <= 1) {
         delEducButton.style.display = "none";
     }
 }
@@ -191,13 +193,13 @@ function delEducationBtn() {
 /////////////////////////////////////////////////
 let skillDiv = document.querySelector("#skill-div");
 let delSkillButton = document.querySelector("#del-Skill-Btn");
-let delAddBtnSkill = 0;
+let delAddBtnSkill = 1;
 function addSkillsBtn() {
     // Creating HTML Element
     let addSkillButton = document.createElement("input");
     // New Attributes for Created Element
     addSkillButton.setAttribute("type", "text");
-    addSkillButton.setAttribute("id", "skills-Input");
+    addSkillButton.setAttribute("id", `skills-Input${delAddBtnSkill}`);
     addSkillButton.classList.add("form-input");
     addSkillButton.setAttribute("required", "");
     addSkillButton.setAttribute("placeholder", "Enter Here");
@@ -207,16 +209,17 @@ function addSkillsBtn() {
     // Increment for Managing Delete Button
     delAddBtnSkill++;
     // Show Delete Button
-    if (delAddBtnSkill == 1) {
+    if (delAddBtnSkill == 2) {
         delSkillButton.style.display = "inline-block";
     }
 }
 // Deleting inputs if user created more then requirement
 function delSkillBtn() {
     // Removing last Element
-    skillDiv.removeChild(skillDiv.children[`${delAddBtnSkill--}`]);
+    skillDiv.removeChild(skillDiv.children[`${delAddBtnSkill - 1}`]);
+    delAddBtnSkill--;
     // Hide Delete Button
-    if (delAddBtnSkill == 0) {
+    if (delAddBtnSkill <= 1) {
         delSkillButton.style.display = "none";
     }
 }
@@ -242,6 +245,58 @@ function generateResume() {
     dataTransfer(".envelope", "#email-Input");
     dataTransfer(".location", "#address-Input");
     // Multiple Data Collecting
+    /////////////////////////////////////////////////
+    // Languages Section Data Collecting
+    /////////////////////////////////////////////////
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --;
+    --; /////////dataTransfer("#lang-List", "#language-Input");
+    // For Loop if More Inputs are created by User
+    for (let exp = 1; exp < delAddBtnExperi; exp++) {
+        // Creating Main Div
+        let divAddExp = document.createElement("div");
+        divAddExp.classList.add("add-Sec-Experience");
+        // Creating HTML Data 01
+        let addDataExp = document.createElement("h5");
+        // Adding Class for Apply CSS Style
+        addDataExp.classList.add("title-Experience");
+        addDataExp.setAttribute("id", `title-Experience${exp}`);
+        // Creating HTML Data 02
+        let addDataExp2 = document.createElement("p");
+        // Adding Class for Apply CSS Style
+        addDataExp2.classList.add("comp-Experience");
+        addDataExp2.setAttribute("id", `comp-Experience${exp}`);
+        // Creating HTML Data 03
+        let addDataExp3 = document.createElement("p");
+        // Adding Class for Apply CSS Style
+        addDataExp3.classList.add("para-Experience");
+        addDataExp3.setAttribute("id", `para-Experience${exp}`);
+        // Inserting Above Created Elements Inside Div
+        divAddExp.appendChild(addDataExp);
+        divAddExp.appendChild(addDataExp2);
+        divAddExp.appendChild(addDataExp3);
+        // Given Position where to be Appear
+        sectionEducation.before(divAddExp);
+        // Transferring Data if Created More
+        dataTransfer(`#title-Experience${exp}`, `#experiencePosition-Input${exp}`);
+        dataTransfer(`#comp-Experience${exp}`, `#experienceCompYear-Input${exp}`);
+        dataTransfer(`#para-Experience${exp}`, `#experiencePara-Input${exp}`);
+    }
     /////////////////////////////////////////////////
     // Experience Section Data Collecting
     /////////////////////////////////////////////////
