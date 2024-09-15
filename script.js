@@ -266,7 +266,7 @@ function generateResume() {
     for (let lang = 1; lang < delAddBtnLang; lang++) {
         let createLi = document.createElement("li");
         createLi.setAttribute("id", `#lang-Li${lang}`);
-        langList.appendChild(createLi);
+        langList.appendChild(langList.children[`${lang - 1}`]);
         dataTransfer(`#lang-Li${lang}`, `#language-Input${lang}`);
     }
     /////////////////////////////////////////////////
