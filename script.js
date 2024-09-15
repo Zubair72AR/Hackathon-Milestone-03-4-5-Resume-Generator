@@ -1,5 +1,7 @@
 "use strict";
+/////////////////////////////////////////////////
 // Add+ More Input for Languages
+/////////////////////////////////////////////////
 let langDiv = document.querySelector("#lang-Div");
 let delLangBtn = document.querySelector("#del-Lang-Btn");
 let delAddBtnLang = 0;
@@ -31,7 +33,9 @@ function delLanguageBtn() {
         delLangBtn.style.display = "none";
     }
 }
+/////////////////////////////////////////////////
 // Add+ More Input for Expertise
+/////////////////////////////////////////////////
 let expertDiv = document.querySelector("#expertise-Div");
 let delExpertBtn = document.querySelector("#del-Expert-Btn");
 let delAddBtnExpert = 0;
@@ -63,7 +67,9 @@ function delExpertiseBtn() {
         delExpertBtn.style.display = "none";
     }
 }
+/////////////////////////////////////////////////
 // Add+ More Input for Experience
+/////////////////////////////////////////////////
 let addExperiBtn = document.querySelector("#add-Experi-Btn");
 let delExperiBtn = document.querySelector("#del-Experi-Btn");
 let idExperiSec = document.querySelector("#id-Experi-Sec");
@@ -76,7 +82,7 @@ function addExperienceBtn() {
     let addExperiElem = document.createElement("input");
     // New Attributes for Created Element
     addExperiElem.setAttribute("type", "text");
-    addExperiElem.setAttribute("id", "experiencePosition-Input");
+    addExperiElem.setAttribute("id", `experiencePosition-Input${delAddBtnExperi}`);
     addExperiElem.classList.add("form-input");
     addExperiElem.setAttribute("placeholder", "Enter your position title here");
     addExperiElem.setAttribute("value", "");
@@ -85,7 +91,7 @@ function addExperienceBtn() {
     let addExperiElem2 = document.createElement("input");
     // New Attributes for Created Element
     addExperiElem2.setAttribute("type", "text");
-    addExperiElem2.setAttribute("id", "experienceCompYear-Input");
+    addExperiElem2.setAttribute("id", `experienceCompYear-Input${delAddBtnExperi}`);
     addExperiElem2.classList.add("form-input");
     addExperiElem2.setAttribute("placeholder", "Company Name / Jan 2020 - Dec 2021");
     addExperiElem2.setAttribute("value", "");
@@ -93,7 +99,7 @@ function addExperienceBtn() {
     // Creating HTML Element 03
     let addExperiElem3 = document.createElement("textarea");
     // New Attributes for Created Element
-    addExperiElem3.setAttribute("id", "experiencePara-Input");
+    addExperiElem3.setAttribute("id", `experiencePara-Input${delAddBtnExperi}`);
     addExperiElem3.setAttribute("rows", "3");
     addExperiElem3.classList.add("form-input");
     addExperiElem3.setAttribute("placeholder", "Enter here");
@@ -120,7 +126,9 @@ function delExperienceBtn() {
         delExperiBtn.style.display = "none";
     }
 }
+/////////////////////////////////////////////////
 // Add+ More Input for Education
+/////////////////////////////////////////////////
 let addEducButton = document.querySelector("#add-Education-Btn");
 let delEducButton = document.querySelector("#del-Education-Btn");
 let idEduSec = document.querySelector("#id-Edu-Sec");
@@ -178,7 +186,9 @@ function delEducationBtn() {
         delEducButton.style.display = "none";
     }
 }
+/////////////////////////////////////////////////
 // Add+ More Input for Skills
+/////////////////////////////////////////////////
 let skillDiv = document.querySelector("#skill-div");
 let delSkillButton = document.querySelector("#del-Skill-Btn");
 let delAddBtnSkill = 0;
@@ -210,26 +220,74 @@ function delSkillBtn() {
         delSkillButton.style.display = "none";
     }
 }
+/////////////////////////////////////////////////
 // Generating CV - Collecting Data from Input form into CV
+/////////////////////////////////////////////////
 let skillGenResume = document.querySelector("#skillGenResume");
+let sectionEducation = document.querySelector("#eduGenResume");
 // General Function for Data Collecting
 function dataTransfer(collect, provide) {
     let dataCollector = document.querySelector(`${collect}`);
     let dataProvider = document.querySelector(`${provide}`);
-    dataCollector.innerHTML = dataProvider.value;
+    dataCollector.innerText = dataProvider.value;
 }
 function generateResume() {
+    /////////////////////////////////////////////////
+    // Single Input Data Collecting
+    /////////////////////////////////////////////////
     dataTransfer(".name", "#fullName-Input");
     dataTransfer(".designation", "#designation-Input");
     dataTransfer(".para-AboutMe", "#aboutMe-Input");
     dataTransfer(".phone", "#phone-Input");
     dataTransfer(".envelope", "#email-Input");
     dataTransfer(".location", "#address-Input");
+    // Multiple Data Collecting
+    /////////////////////////////////////////////////
+    // Experience Section Data Collecting
+    /////////////////////////////////////////////////
+    dataTransfer(".title-Experience", "#experiencePosition-Input");
+    dataTransfer(".comp-Experience", "#experienceCompYear-Input");
+    dataTransfer(".para-Experience", "#experiencePara-Input");
+    // For Loop if More Inputs are created by User
+    for (let exp = 1; exp < delAddBtnExperi; exp++) {
+        // Creating Main Div
+        let divAddExp = document.createElement("div");
+        divAddExp.classList.add("add-Sec-Experience");
+        // Creating HTML Data 01
+        let addDataExp = document.createElement("h5");
+        // Adding Class for Apply CSS Style
+        addDataExp.classList.add("title-Experience");
+        addDataExp.setAttribute("id", `title-Experience${exp}`);
+        // Creating HTML Data 02
+        let addDataExp2 = document.createElement("p");
+        // Adding Class for Apply CSS Style
+        addDataExp2.classList.add("comp-Experience");
+        addDataExp2.setAttribute("id", `comp-Experience${exp}`);
+        // Creating HTML Data 03
+        let addDataExp3 = document.createElement("p");
+        // Adding Class for Apply CSS Style
+        addDataExp3.classList.add("para-Experience");
+        addDataExp3.setAttribute("id", `para-Experience${exp}`);
+        // Inserting Above Created Elements Inside Div
+        divAddExp.appendChild(addDataExp);
+        divAddExp.appendChild(addDataExp2);
+        divAddExp.appendChild(addDataExp3);
+        // Given Position where to be Appear
+        sectionEducation.before(divAddExp);
+        // Transferring Data if Created More
+        dataTransfer(`#title-Experience${exp}`, `#experiencePosition-Input${exp}`);
+        dataTransfer(`#comp-Experience${exp}`, `#experienceCompYear-Input${exp}`);
+        dataTransfer(`#para-Experience${exp}`, `#experiencePara-Input${exp}`);
+    }
+    /////////////////////////////////////////////////
+    // Education Section Data Collecting
+    /////////////////////////////////////////////////
     dataTransfer(".institute-Education", "#educationInstitute-Input");
     dataTransfer(".degree-Education", "#educationDegree-Input");
     dataTransfer(".year-Education", "#educationYear-Input");
-    let edu = 0;
-    for (edu = 0; edu <= delAddBtnEducation - 1; edu++) {
+    // For Loop if More Inputs are created by User
+    for (let edu = 1; edu < delAddBtnEducation; edu++) {
+        // Creating Main Div
         let divAddEdu = document.createElement("div");
         divAddEdu.classList.add("add-Sec-Education");
         // Creating HTML Data 01
@@ -253,8 +311,9 @@ function generateResume() {
         divAddEdu.appendChild(addDataEdu3);
         // Given Position where to be Appear
         skillGenResume.before(divAddEdu);
-        dataTransfer(`#institute-Education${edu}`, `#educationInstitute-Input${edu + 1}`);
-        dataTransfer(`#degree-Education${edu}`, `#educationDegree-Input${edu + 1}`);
-        dataTransfer(`#year-Education${edu}`, `#educationYear-Input${edu + 1}`);
+        // Transferring Data if Created More
+        dataTransfer(`#institute-Education${edu}`, `#educationInstitute-Input${edu}`);
+        dataTransfer(`#degree-Education${edu}`, `#educationDegree-Input${edu}`);
+        dataTransfer(`#year-Education${edu}`, `#educationYear-Input${edu}`);
     }
 }
