@@ -468,29 +468,47 @@ function generateResume() {
 
   for (let skill = 1; skill <= delAddBtnSkill; skill++) {
     // Creating Main Div
-    let divAddLang = document.createElement("div");
-    divAddLang.classList.add("list");
+    let divAddSkill = document.createElement("div");
     // Set Attributes
-    divAddLang.setAttribute("id", "lang-List");
+    divAddSkill.setAttribute("id", "skill-List");
 
     // Creating Mini Div
     let divMini = document.createElement("div");
     // Adding Class for Apply CSS Style
-    divMini.classList.add("dot");
+    divMini.classList.add("dot-Skill");
 
     // Creating HTML Data 02
-    let langPara = document.createElement("p");
+    let skillPara = document.createElement("p");
     // Adding Class for Apply CSS Style
-    langPara.setAttribute("id", `lang-p${skill}`);
+    skillPara.setAttribute("id", `skill-p${skill}`);
 
     // Inserting Above Created Elements Inside Div
-    divAddLang.appendChild(divMini);
-    divAddLang.appendChild(langPara);
+    divAddSkill.appendChild(divMini);
+    divAddSkill.appendChild(skillPara);
 
     // Given Position where to be Appear
-    skillsListSec.appendChild(divAddLang);
+    skillsListSec.appendChild(divAddSkill);
 
     // Transferring Data if Created More
     dataTransfer(`#skill-p${skill}`, `#skills-Input${skill}`);
   }
 }
+
+/////////////////////////////////////////////////
+// DownLoad PDF
+/////////////////////////////////////////////////
+
+let resume = document.querySelector(".generate-Resume") as HTMLElement;
+let downloadPDF = document.querySelector("#Download-PDF") as HTMLElement;
+downloadPDF.addEventListener("click", () => {
+  let opt = {
+    margin: [0, 0, 0, 0],
+    filename: resume + ".pdf",
+    image: { type: "jpeg", quality: 1 },
+    pagebreak: { avoid: "tr", mode: "css", before: "#nextpage1" },
+    html2canvas: { scale: 4, useCORS: true, dpi: 192, letterRendering: true },
+    jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+  };
+
+  html2pdf().from(resume).set(opt).save();
+});

@@ -10,6 +10,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"
+      integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <main class="main">
@@ -305,9 +311,7 @@
           Generate Resume
         </button>
         <!-- Button for Downloading PDF -->
-        <button onclick="downloadPDF()" class="buttons" id="Download-PDF">
-          Download PDF
-        </button>
+        <button class="buttons" id="Download-PDF">Download PDF</button>
         <!-- Button for Creating Sharable Link -->
         <button onclick="shareLink()" class="buttons" id="Share-Link">
           Share Link

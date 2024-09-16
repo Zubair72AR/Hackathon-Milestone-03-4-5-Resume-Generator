@@ -104,12 +104,12 @@ body {
   color: var(--text-white);
 }
 
-#language-Input,
-#expertise-Input,
-#experiencePara-Input,
-#educationYear-Input,
-#skills-Input {
-  margin-bottom: 1.2rem;
+#lang-Div,
+#expertise-Div,
+.experience-Sec,
+#education-Sec,
+#skill-div {
+  margin-bottom: 0.8rem;
 }
 /* "Add More" Button Styling */
 .add-Button {
@@ -157,6 +157,7 @@ body {
   display: none;
 }
 #del-Experi-Btn {
+  margin-top: 0.6rem;
   display: none;
 }
 

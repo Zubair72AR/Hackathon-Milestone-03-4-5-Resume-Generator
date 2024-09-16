@@ -10,12 +10,11 @@
 /* Resume Output */
 .generate-Resume {
   position: relative;
-  max-width: 900px;
-  min-height: 1100px;
+  max-width: 19cm;
+  min-height: 27.9cm;
   display: flex;
-  margin: 2rem auto;
+  margin: auto;
   background-color: white;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Resume Left Portion for About Me, Personal Info, Languages ETC. */
@@ -33,7 +32,7 @@
 img {
   z-index: 9999;
   width: 80%;
-  margin-top: 5rem;
+  margin-top: 4.5rem;
   border: 3px solid var(--Red);
   border-radius: 50%;
 }
@@ -41,7 +40,7 @@ img {
 /* Name & Designation */
 .section-Name {
   width: 100%;
-  margin-top: 8.5rem;
+  margin-top: 7rem;
   padding: 2rem;
   padding-left: 43%;
   position: absolute;
@@ -290,12 +289,6 @@ img {
 }
 
 /* Responsive Setup */
-@media screen and (max-width: 800px) {
-  /* Name & Designation */
-  .section-Name {
-    margin-top: 7.5rem;
-  }
-}
 @media screen and (max-width: 700px) {
   /* Resume Generator */
   .generate-Resume {
