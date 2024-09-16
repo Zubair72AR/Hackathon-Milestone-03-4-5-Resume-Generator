@@ -224,11 +224,13 @@ function delSkillBtn() {
     }
 }
 /////////////////////////////////////////////////
-// Generating CV - Collecting Data from Input form into CV
+// Generating CV - Collecting Data from Input form
 /////////////////////////////////////////////////
-let langList = document.querySelector("#lang-List");
+let langList = document.querySelector(".languages-List");
+let expertiseList = document.querySelector(".expertise-list");
 let skillGenResume = document.querySelector("#skillGenResume");
 let sectionEducation = document.querySelector("#eduGenResume");
+let skillsListSec = document.querySelector(".skills-List-Sec");
 // General Function for Data Collecting
 function dataTransfer(collect, provide) {
     let dataCollector = document.querySelector(`${collect}`);
@@ -249,23 +251,58 @@ function generateResume() {
     /////////////////////////////////////////////////
     // Languages Section Data Collecting
     /////////////////////////////////////////////////
-    dataTransfer("#lang-Li", "#language-Input");
+    dataTransfer("#lang-p", "#language-Input");
     delAddBtnLang--;
     // For Loop if More Inputs are created by User
-    let lang = 1;
-    if (lang != delAddBtnLang) {
-        for (lang = 1; lang <= delAddBtnLang; lang++) {
-            // Creating Li
-            let createLi = document.createElement("li");
-            // Adding ID Attributes
-            createLi.setAttribute("id", `lang-Li${lang}`);
-            // Given Position where to be Appear
-            langList.append(createLi);
-            // Transferring Data if Created More
-            dataTransfer(`#lang-Li${lang}`, `#language-Input${lang}`);
-            console.log(delAddBtnLang);
-            console.log(lang);
-        }
+    for (let lang = 1; lang <= delAddBtnLang; lang++) {
+        // Creating Main Div
+        let divAddLang = document.createElement("div");
+        divAddLang.classList.add("list");
+        // Set Attributes
+        divAddLang.setAttribute("id", "lang-List");
+        // Creating Mini Div
+        let divMini = document.createElement("div");
+        // Adding Class for Apply CSS Style
+        divMini.classList.add("dot");
+        // Creating HTML Data 02
+        let langPara = document.createElement("p");
+        // Adding Class for Apply CSS Style
+        langPara.setAttribute("id", `lang-p${lang}`);
+        // Inserting Above Created Elements Inside Div
+        divAddLang.appendChild(divMini);
+        divAddLang.appendChild(langPara);
+        // Given Position where to be Appear
+        langList.appendChild(divAddLang);
+        // Transferring Data if Created More
+        dataTransfer(`#lang-p${lang}`, `#language-Input${lang}`);
+    }
+    /////////////////////////////////////////////////
+    // Expertise Section Data Collecting
+    /////////////////////////////////////////////////
+    dataTransfer("#expertise-p", "#expertise-Input");
+    delAddBtnExpert--;
+    // For Loop if More Inputs are created by User
+    for (let expertise = 1; expertise <= delAddBtnExpert; expertise++) {
+        // Creating Main Div
+        let divAddExpert = document.createElement("div");
+        divAddExpert.classList.add("list");
+        // Set Attributes
+        divAddExpert.setAttribute("id", "expertise-List");
+        // Creating Mini Div
+        let divMini = document.createElement("div");
+        // Adding Class for Apply CSS Style
+        divMini.classList.add("dot");
+        // Creating HTML Data 02
+        let expertPara = document.createElement("p");
+        // Adding Class for Apply CSS Style
+        expertPara.setAttribute("id", `expertise-p${expertise}`);
+        // Inserting Above Created Elements Inside Div
+        divAddExpert.appendChild(divMini);
+        divAddExpert.appendChild(expertPara);
+        // Given Position where to be Appear
+        expertiseList.appendChild(divAddExpert);
+        // Transferring Data if Created More
+        dataTransfer(`#expertise-p${expertise}`, `#expertise-Input${expertise}`);
     }
     /////////////////////////////////////////////////
     // Experience Section Data Collecting
@@ -340,5 +377,33 @@ function generateResume() {
         dataTransfer(`#institute-Education${edu}`, `#educationInstitute-Input${edu}`);
         dataTransfer(`#degree-Education${edu}`, `#educationDegree-Input${edu}`);
         dataTransfer(`#year-Education${edu}`, `#educationYear-Input${edu}`);
+    }
+    /////////////////////////////////////////////////
+    // Skills Section Data Collecting
+    /////////////////////////////////////////////////
+    dataTransfer("#skill-p", "#skills-Input");
+    delAddBtnSkill--;
+    // For Loop if More Inputs are created by User
+    for (let skill = 1; skill <= delAddBtnSkill; skill++) {
+        // Creating Main Div
+        let divAddLang = document.createElement("div");
+        divAddLang.classList.add("list");
+        // Set Attributes
+        divAddLang.setAttribute("id", "lang-List");
+        // Creating Mini Div
+        let divMini = document.createElement("div");
+        // Adding Class for Apply CSS Style
+        divMini.classList.add("dot");
+        // Creating HTML Data 02
+        let langPara = document.createElement("p");
+        // Adding Class for Apply CSS Style
+        langPara.setAttribute("id", `lang-p${skill}`);
+        // Inserting Above Created Elements Inside Div
+        divAddLang.appendChild(divMini);
+        divAddLang.appendChild(langPara);
+        // Given Position where to be Appear
+        skillsListSec.appendChild(divAddLang);
+        // Transferring Data if Created More
+        dataTransfer(`#skill-p${skill}`, `#skills-Input${skill}`);
     }
 }

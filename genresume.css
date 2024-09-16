@@ -140,17 +140,26 @@ img {
   text-transform: uppercase;
 }
 .languages-List {
-  width: 50%;
+  width: 60%;
   margin-bottom: 2rem;
 }
+
 .list {
-  list-style-type: square;
+  display: flex;
+  align-items: center;
   font-size: 0.9rem;
   font-weight: 300;
+  margin-bottom: 0.2rem;
 }
-.list li {
+.dot {
+  margin-right: 10px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-white);
+}
+/*/////////////////////////.list li {
   margin-bottom: 0.5rem;
-}
+}////////////////////////*/
 
 /* Expertise Known */
 .expertise-Sec {
@@ -169,7 +178,7 @@ img {
   text-transform: uppercase;
 }
 .expertise-list {
-  width: 50%;
+  width: 60%;
   margin-bottom: 3rem;
 }
 /*Left Portions Ends Here */
@@ -266,15 +275,18 @@ img {
 
 .skills-List-Sec {
   padding-left: 2rem;
-}
-.skills-List {
-  list-style-type: square;
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 3rem;
 }
-.skills-List li {
-  margin-bottom: 0.15rem;
+#skill-List {
+  display: flex;
+  align-items: center;
+}
+.dot-Skill {
+  margin-right: 10px;
+  width: 5px;
+  height: 5px;
+  background-color: black;
 }
 
 /* Responsive Setup */
@@ -348,7 +360,7 @@ img {
   .skills-List-Sec {
     padding-left: 0rem;
   }
-  .skills-List {
-    list-style-type: none;
+  .dot-Skill {
+    display: none;
   }
 }
