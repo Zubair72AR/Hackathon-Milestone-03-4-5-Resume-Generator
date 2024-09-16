@@ -413,7 +413,7 @@ let resume = document.querySelector(".generate-Resume");
 let downloadPDF = document.querySelector("#Download-PDF");
 downloadPDF.addEventListener("click", () => {
     let opt = {
-        margin: [0, 0, 0, 0],
+        margin: [-6.5, 0, 0, 0],
         filename: resume + ".pdf",
         image: { type: "jpeg", quality: 1 },
         pagebreak: { avoid: "tr", mode: "css", before: "#nextpage1" },
@@ -421,4 +421,40 @@ downloadPDF.addEventListener("click", () => {
         jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
     };
     html2pdf().from(resume).set(opt).save();
+});
+/////////////////////////////////////////////////
+// Color Changing
+/////////////////////////////////////////////////
+// Color Picker
+let colorPick01 = document.querySelector("#Color-01");
+let colorPick02 = document.querySelector("#Color-02");
+// Color 01 - All Elements Need to be changed
+let secName = document.querySelector(".section-Name");
+let secName2 = document.querySelector(".section-NameMQ ");
+let imageBorder = document.querySelector("img");
+let icn1 = document.querySelector("#icn1");
+let icn2 = document.querySelector("#icn2");
+let icn3 = document.querySelector("#icn3");
+let langSec = document.querySelector(".languages-Sec");
+let expertSec = document.querySelector(".expertise-Sec");
+let secExperi = document.querySelector(".section-Experience");
+let secEduc = document.querySelector(".section-Education");
+let secSkills = document.querySelector(".section-Skills");
+// Color 02 - All Elements Need to be changed
+let leftPortion = document.querySelector(".left-Portion");
+colorPick01.addEventListener("input", function () {
+    secName.style.backgroundColor = colorPick01.value;
+    secName2.style.backgroundColor = colorPick01.value;
+    imageBorder.style.borderColor = colorPick01.value;
+    icn1.style.backgroundColor = colorPick01.value;
+    icn2.style.backgroundColor = colorPick01.value;
+    icn3.style.backgroundColor = colorPick01.value;
+    langSec.style.color = colorPick01.value;
+    expertSec.style.color = colorPick01.value;
+    secExperi.style.backgroundColor = colorPick01.value;
+    secEduc.style.backgroundColor = colorPick01.value;
+    secSkills.style.backgroundColor = colorPick01.value;
+});
+colorPick02.addEventListener("input", function () {
+    leftPortion.style.backgroundColor = colorPick02.value;
 });
