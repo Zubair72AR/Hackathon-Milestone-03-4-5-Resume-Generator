@@ -276,6 +276,9 @@ let expertiseList = document.querySelector(".expertise-list") as HTMLElement;
 let skillGenResume = document.querySelector("#skillGenResume") as HTMLElement;
 let sectionEducation = document.querySelector("#eduGenResume") as HTMLElement;
 let skillsListSec = document.querySelector(".skills-List-Sec") as HTMLElement;
+let btnGenerateResume = document.querySelector(
+  "#Generate-Resume"
+) as HTMLElement;
 // General Function for Data Collecting
 function dataTransfer(collect: string, provide: string) {
   let dataCollector = document.querySelector(`${collect}`) as HTMLElement;
@@ -331,6 +334,8 @@ function generateResume() {
     let langPara = document.createElement("p");
     // Adding Class for Apply CSS Style
     langPara.setAttribute("id", `lang-p${lang}`);
+    langPara.setAttribute("contenteditable", "true");
+    langPara.setAttribute("class", "none");
 
     // Inserting Above Created Elements Inside Div
     divAddLang.appendChild(divMini);
@@ -366,6 +371,8 @@ function generateResume() {
     let expertPara = document.createElement("p");
     // Adding Class for Apply CSS Style
     expertPara.setAttribute("id", `expertise-p${expertise}`);
+    expertPara.setAttribute("contenteditable", "true");
+    expertPara.setAttribute("class", "none");
 
     // Inserting Above Created Elements Inside Div
     divAddExpert.appendChild(divMini);
@@ -396,18 +403,21 @@ function generateResume() {
     // Adding Class for Apply CSS Style
     addDataExp.classList.add("title-Experience");
     addDataExp.setAttribute("id", `title-Experience${exp}`);
+    addDataExp.setAttribute("contenteditable", "true");
 
     // Creating HTML Data 02
     let addDataExp2 = document.createElement("p");
     // Adding Class for Apply CSS Style
     addDataExp2.classList.add("comp-Experience");
     addDataExp2.setAttribute("id", `comp-Experience${exp}`);
+    addDataExp2.setAttribute("contenteditable", "true");
 
     // Creating HTML Data 03
     let addDataExp3 = document.createElement("p");
     // Adding Class for Apply CSS Style
     addDataExp3.classList.add("para-Experience");
     addDataExp3.setAttribute("id", `para-Experience${exp}`);
+    addDataExp3.setAttribute("contenteditable", "true");
 
     // Inserting Above Created Elements Inside Div
     divAddExp.appendChild(addDataExp);
@@ -441,18 +451,21 @@ function generateResume() {
     // Adding Class for Apply CSS Style
     addDataEdu.classList.add("institute-Education");
     addDataEdu.setAttribute("id", `institute-Education${edu}`);
+    addDataEdu.setAttribute("contenteditable", "true");
 
     // Creating HTML Data 02
     let addDataEdu2 = document.createElement("p");
     // Adding Class for Apply CSS Style
     addDataEdu2.classList.add("degree-Education");
     addDataEdu2.setAttribute("id", `degree-Education${edu}`);
+    addDataEdu2.setAttribute("contenteditable", "true");
 
     // Creating HTML Data 03
     let addDataEdu3 = document.createElement("p");
     // Adding Class for Apply CSS Style
     addDataEdu3.classList.add("year-Education");
     addDataEdu3.setAttribute("id", `year-Education${edu}`);
+    addDataEdu3.setAttribute("contenteditable", "true");
 
     // Inserting Above Created Elements Inside Div
     divAddEdu.appendChild(addDataEdu);
@@ -493,6 +506,8 @@ function generateResume() {
     let skillPara = document.createElement("p");
     // Adding Class for Apply CSS Style
     skillPara.setAttribute("id", `skill-p${skill}`);
+    skillPara.setAttribute("contenteditable", "true");
+    skillPara.setAttribute("class", "none");
 
     // Inserting Above Created Elements Inside Div
     divAddSkill.appendChild(divMini);
@@ -507,6 +522,8 @@ function generateResume() {
 
   resume.style.display = "flex";
   buttonsColor.style.display = "flex";
+
+  btnGenerateResume.style.display = "none";
 }
 
 /////////////////////////////////////////////////

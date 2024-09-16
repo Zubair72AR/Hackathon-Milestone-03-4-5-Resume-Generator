@@ -63,6 +63,7 @@ img {
   background-color: var(--Red);
 }
 .name {
+  outline: none;
   line-height: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -71,6 +72,7 @@ img {
   margin-bottom: 0.5rem;
 }
 .designation {
+  outline: none;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 1.3rem;
@@ -79,6 +81,7 @@ img {
 
 /* About Me */
 .heading-AboutMe {
+  outline: none;
   margin: 3rem 0rem 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -86,6 +89,7 @@ img {
   font-weight: 500;
 }
 .para-AboutMe {
+  outline: none;
   width: 80%;
   text-align: center;
   font-size: 0.9rem;
@@ -118,6 +122,7 @@ img {
   width: 1.5rem;
 }
 .info-Text {
+  outline: none;
   font-size: 0.9rem;
   font-weight: 300;
 }
@@ -133,6 +138,7 @@ img {
   margin-bottom: 1rem;
 }
 .heading-Language {
+  outline: none;
   letter-spacing: 0.1rem;
   font-size: 1rem;
   font-weight: 700;
@@ -144,6 +150,7 @@ img {
 }
 
 .list {
+  outline: none;
   display: flex;
   align-items: center;
   font-size: 0.9rem;
@@ -155,6 +162,10 @@ img {
   width: 5px;
   height: 5px;
   background-color: var(--text-white);
+}
+
+.none {
+  outline: none;
 }
 /*/////////////////////////.list li {
   margin-bottom: 0.5rem;
@@ -171,6 +182,7 @@ img {
   margin-bottom: 1rem;
 }
 .heading-Expertise {
+  outline: none;
   letter-spacing: 0.1rem;
   font-size: 1rem;
   font-weight: 700;
@@ -200,6 +212,7 @@ img {
   margin-bottom: 0.7rem;
 }
 .heading-Experience {
+  outline: none;
   letter-spacing: 0.1rem;
   font-size: 1.1rem;
   font-weight: 700;
@@ -209,14 +222,17 @@ img {
   padding-left: 1rem;
 }
 .title-Experience {
+  outline: none;
   font-size: 1rem;
   font-weight: 600;
 }
 .comp-Experience {
+  outline: none;
   font-size: 1rem;
   font-weight: 600;
 }
 .para-Experience {
+  outline: none;
   font-size: 0.95rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -233,6 +249,7 @@ img {
   margin-bottom: 0.7rem;
 }
 .heading-Education {
+  outline: none;
   letter-spacing: 0.1rem;
   font-size: 1.1rem;
   font-weight: 700;
@@ -242,14 +259,17 @@ img {
   padding-left: 1rem;
 }
 .institute-Education {
+  outline: none;
   font-size: 1rem;
   font-weight: 600;
 }
 .degree-Education {
+  outline: none;
   font-size: 1rem;
   font-weight: 600;
 }
 .year-Education {
+  outline: none;
   font-size: 0.95rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -266,6 +286,7 @@ img {
   margin-bottom: 0.7rem;
 }
 .heading-Skills {
+  outline: none;
   letter-spacing: 0.1rem;
   font-size: 1.1rem;
   font-weight: 700;
