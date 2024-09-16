@@ -471,3 +471,89 @@ colorPick01.addEventListener("input", function () {
 colorPick02.addEventListener("input", function () {
     leftPortion.style.backgroundColor = colorPick02.value;
 });
+/////////////////////////////////////////////////
+// Fill Dummy Data
+/////////////////////////////////////////////////
+function dummyInfo() {
+    document.getElementById("fullName-Input").value =
+        "Zubair Ahmed";
+    document.getElementById("designation-Input").value =
+        "Web & Graphics Designer";
+    document.getElementById("profileImage-Input").src =
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeOlwb6YnVU55H4BNqtLm7T8b7thI-HiQBrg&s";
+    document.getElementById("aboutMe-Input").value =
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aexercitationem, ipsam sit, illo aliquam officia earum autem adnesciunt rem, sed necessitatibus beatae soluta nobis veritatis.Voluptas repudiandae harum repellendus!";
+    document.getElementById("phone-Input").value =
+        "+92 333 123 4567";
+    document.getElementById("email-Input").value =
+        "yourmail123@gmail.com";
+    document.getElementById("address-Input").value =
+        "Karachi, Sindh - Pakistan";
+    addLanguageBtn();
+    addLanguageBtn();
+    addLanguageBtn();
+    addLanguageBtn();
+    document.getElementById("language-Input").value =
+        "English";
+    document.getElementById("language-Input1").value =
+        "Urdu";
+    document.getElementById("language-Input2").value =
+        "Arabic";
+    document.getElementById("language-Input3").value =
+        "Spanish";
+    document.getElementById("language-Input4").value =
+        "Persian";
+    addExpertBtn();
+    addExpertBtn();
+    addExpertBtn();
+    addExpertBtn();
+    document.getElementById("expertise-Input").value =
+        "Management Skills";
+    document.getElementById("expertise-Input1").value =
+        "Creativity";
+    document.getElementById("expertise-Input2").value =
+        "Digital Marketing";
+    document.getElementById("expertise-Input3").value =
+        "Leadership";
+    document.getElementById("expertise-Input4").value =
+        "Team Work";
+    addExperienceBtn();
+    document.getElementById("experiencePosition-Input").value = "Enter your position title here";
+    document.getElementById("experienceCompYear-Input").value = "Company Name / Jan 2020 - Present";
+    document.getElementById("experiencePara-Input").value =
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aexercitationem, ipsam sit, illo aliquam officia earum autem adnesciunt rem, sed necessitatibus beatae soluta nobis veritatis.Voluptas repudiandae harum repellendus!";
+    document.getElementById("experiencePosition-Input1").value = "Enter your position title here";
+    document.getElementById("experienceCompYear-Input1").value = "Company Name / Jan 2020 - Present";
+    document.getElementById("experiencePara-Input1").value =
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aexercitationem, ipsam sit, illo aliquam officia earum autem adnesciunt rem, sed necessitatibus beatae soluta nobis veritatis.Voluptas repudiandae harum repellendus!";
+    addEducationBtn();
+    document.getElementById("educationInstitute-Input").value = "University of Karachi";
+    document.getElementById("educationDegree-Input").value =
+        "Master of Business Management";
+    document.getElementById("educationYear-Input").value =
+        "Jan 2020 - Dec 2023";
+    document.getElementById("educationInstitute-Input1").value = "Karachi Public School";
+    document.getElementById("educationDegree-Input1").value = "Intermediate & SSC";
+    document.getElementById("educationYear-Input1").value =
+        "Jan 2020 - Dec 2023";
+    addSkillsBtn();
+    addSkillsBtn();
+    addSkillsBtn();
+    addSkillsBtn();
+    addSkillsBtn();
+    addSkillsBtn();
+    document.getElementById("skills-Input").value =
+        "Javascript-Typescript";
+    document.getElementById("skills-Input1").value =
+        "Next js-React";
+    document.getElementById("skills-Input2").value =
+        "HTML-CSS";
+    document.getElementById("skills-Input3").value =
+        "Adobe Photoshop";
+    document.getElementById("skills-Input4").value =
+        "Adobe Illustrator";
+    document.getElementById("skills-Input5").value =
+        "Adobe AfterEffect";
+    document.getElementById("skills-Input6").value =
+        "Cinema 4D";
+}
