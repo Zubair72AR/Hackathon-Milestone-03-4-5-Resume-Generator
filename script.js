@@ -247,6 +247,16 @@ function generateResume() {
     dataTransfer(".phone", "#phone-Input");
     dataTransfer(".envelope", "#email-Input");
     dataTransfer(".location", "#address-Input");
+    /////////////////////////////////////////////////
+    // Image Updating
+    /////////////////////////////////////////////////
+    let imageFile = document.getElementById("profileImage-Input").files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(imageFile);
+    reader.onloadend = function () {
+        let imgOutput = document.getElementById("imgOutput");
+        imgOutput === null || imgOutput === void 0 ? void 0 : imgOutput.setAttribute("src", `${reader.result}`);
+    };
     // Multiple Data Collecting
     /////////////////////////////////////////////////
     // Languages Section Data Collecting

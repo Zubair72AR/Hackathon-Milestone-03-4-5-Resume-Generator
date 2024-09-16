@@ -294,6 +294,18 @@ function generateResume() {
   dataTransfer(".envelope", "#email-Input");
   dataTransfer(".location", "#address-Input");
 
+  /////////////////////////////////////////////////
+  // Image Updating
+  /////////////////////////////////////////////////
+  let imageFile = document.getElementById("profileImage-Input").files[0];
+  let reader = new FileReader();
+  reader.readAsDataURL(imageFile);
+
+  reader.onloadend = function () {
+    let imgOutput = document.getElementById("imgOutput");
+    imgOutput?.setAttribute("src", `${reader.result}`);
+  };
+
   // Multiple Data Collecting
 
   /////////////////////////////////////////////////
