@@ -12,7 +12,7 @@
   position: relative;
   max-width: 19cm;
   min-height: 27.9cm;
-  display: flex;
+  display: none;
   margin: auto;
   background-color: white;
 }
@@ -30,7 +30,7 @@
 
 /* Profile Image */
 img {
-  z-index: 9999;
+  z-index: 9;
   width: 80%;
   margin-top: 4.5rem;
   border: 3px solid var(--Red);

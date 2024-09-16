@@ -492,12 +492,16 @@ function generateResume() {
     // Transferring Data if Created More
     dataTransfer(`#skill-p${skill}`, `#skills-Input${skill}`);
   }
+
+  resume.style.display = "flex";
+  buttonsColor.style.display = "flex";
 }
 
 /////////////////////////////////////////////////
 // DownLoad PDF
 /////////////////////////////////////////////////
 
+let buttonsColor = document.querySelector(".buttons-Color") as HTMLElement;
 let resume = document.querySelector(".generate-Resume") as HTMLElement;
 let downloadPDF = document.querySelector("#Download-PDF") as HTMLElement;
 downloadPDF.addEventListener("click", () => {

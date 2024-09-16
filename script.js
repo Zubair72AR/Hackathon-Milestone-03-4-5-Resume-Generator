@@ -405,10 +405,13 @@ function generateResume() {
         // Transferring Data if Created More
         dataTransfer(`#skill-p${skill}`, `#skills-Input${skill}`);
     }
+    resume.style.display = "flex";
+    buttonsColor.style.display = "flex";
 }
 /////////////////////////////////////////////////
 // DownLoad PDF
 /////////////////////////////////////////////////
+let buttonsColor = document.querySelector(".buttons-Color");
 let resume = document.querySelector(".generate-Resume");
 let downloadPDF = document.querySelector("#Download-PDF");
 downloadPDF.addEventListener("click", () => {
