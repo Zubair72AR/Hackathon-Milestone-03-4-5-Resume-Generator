@@ -52,6 +52,7 @@ body {
 
 /* Button for Filling Dummy Information */
 .dummy-Info {
+  cursor: pointer;
   border: none;
   border: 1px solid var(--Red-Color);
   background-color: var(--Red-Color);
@@ -113,6 +114,7 @@ body {
 }
 /* "Add More" Button Styling */
 .add-Button {
+  cursor: pointer;
   border: none;
   border: 1px solid var(--Red-Color);
   background-color: var(--Red-Color);
@@ -129,6 +131,7 @@ body {
 }
 /* Delete Button Styling */
 .del-Button {
+  cursor: pointer;
   border: none;
   border: 1px solid var(--Dark-Color);
   background-color: var(--Dark-Color);
@@ -166,6 +169,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .buttons {
+  cursor: pointer;
   width: 190px;
   height: 35px;
   border: none;
@@ -185,6 +189,7 @@ body {
 
 /* Customize Colors */
 .buttons-Color {
+  padding: 2rem;
   display: none;
   justify-content: center;
   align-items: center;
@@ -194,6 +199,7 @@ body {
   font-weight: 600;
 }
 .color-Styling {
+  cursor: pointer;
   width: 3rem;
   height: 2.5rem;
   margin-left: 1rem;

@@ -570,4 +570,6 @@ function dummyInfo() {
         "Adobe AfterEffect";
     document.getElementById("skills-Input6").value =
         "Cinema 4D";
+    let str = ["Please upload Image, Rest Data is Filled"];
+    alert(str);
 }
