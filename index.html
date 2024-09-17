@@ -10,12 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"
-      integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
   </head>
   <body>
     <main class="main">
@@ -337,141 +332,147 @@
         />
       </div>
     </main>
-    <!-- Resume Output -->
-    <main class="generate-Resume">
-      <!-- Resume Left Portion for About Me, Personal Info, Languages ETC. -->
-      <!-- Name & Designation for -->
-      <div class="section-Name">
-        <h1 class="name" contenteditable="true">Zubair Ahmed</h1>
-        <h3 class="designation" contenteditable="true">
-          Web & Graphics Designer
-        </h3>
-      </div>
-      <section class="left-Portion">
-        <!-- Profile Image -->
-        <img src="Porfolio Image.jpg" alt="Profile Image" id="imgOutput" />
-
-        <!-- Name & Designation for Media -->
-        <div class="section-NameMQ">
-          <h1 class="name" contenteditable="true">Zubair AR</h1>
+    <main class="container">
+      <!-- Resume Output -->
+      <main class="generate-Resume">
+        <!-- Resume Left Portion for About Me, Personal Info, Languages ETC. -->
+        <!-- Name & Designation for -->
+        <div class="section-Name">
+          <h1 class="name" contenteditable="true">Zubair Ahmed</h1>
           <h3 class="designation" contenteditable="true">
             Web & Graphics Designer
           </h3>
         </div>
+        <section class="left-Portion">
+          <!-- Profile Image -->
+          <img src="Porfolio Image.jpg" alt="Profile Image" id="imgOutput" />
 
-        <!-- About Me -->
-        <h4 class="heading-AboutMe" contenteditable="true">About Me</h4>
-        <p class="para-AboutMe" contenteditable="true">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
-          exercitationem, ipsam sit, illo aliquam officia earum autem ad
-          nesciunt rem, sed necessitatibus beatae soluta nobis veritatis.
-          Voluptas repudiandae harum repellendus!
-        </p>
+          <!-- Name & Designation for Media -->
+          <div class="section-NameMQ">
+            <h1 class="name" contenteditable="true">Zubair AR</h1>
+            <h3 class="designation" contenteditable="true">
+              Web & Graphics Designer
+            </h3>
+          </div>
 
-        <!-- Contact Info -->
-        <div class="contact-Sec">
-          <div class="contact-Info">
-            <div class="info-Icon" id="icn1">
-              <i class="fa-solid fa-phone"></i>
+          <!-- About Me -->
+          <h4 class="heading-AboutMe" contenteditable="true">About Me</h4>
+          <p class="para-AboutMe" contenteditable="true">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
+            exercitationem, ipsam sit, illo aliquam officia earum autem ad
+            nesciunt rem, sed necessitatibus beatae soluta nobis veritatis.
+            Voluptas repudiandae harum repellendus!
+          </p>
+
+          <!-- Contact Info -->
+          <div class="contact-Sec">
+            <div class="contact-Info">
+              <div class="info-Icon" id="icn1">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <p class="info-Text phone" contenteditable="true">
+                +92 333 123 4567
+              </p>
             </div>
-            <p class="info-Text phone" contenteditable="true">
-              +92 333 123 4567
+
+            <div class="contact-Info">
+              <div class="info-Icon" id="icn2">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <p class="info-Text envelope" contenteditable="true">
+                youremail123@gmail.com
+              </p>
+            </div>
+
+            <div class="contact-Info">
+              <div class="info-Icon" id="icn3">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <p class="info-Text location" contenteditable="true">
+                Karachi, Sindh - Pakistan
+              </p>
+            </div>
+          </div>
+
+          <!-- Languages Known -->
+          <div class="languages-Sec">
+            <h4 class="heading-Language" contenteditable="true">Languages</h4>
+          </div>
+          <div class="languages-List">
+            <div class="list" id="lang-List">
+              <div class="dot"></div>
+              <p class="none" id="lang-p" contenteditable="true">English</p>
+            </div>
+          </div>
+
+          <!-- Expertise Known -->
+          <div class="expertise-Sec">
+            <h4 class="heading-Expertise" contenteditable="true">Expertise</h4>
+          </div>
+          <div class="expertise-list">
+            <div class="list" id="expertise-List">
+              <div class="dot"></div>
+              <p class="none" id="expertise-p" contenteditable="true">
+                English
+              </p>
+            </div>
+          </div>
+
+          <!-- Left Portions Ends Here -->
+        </section>
+        <!-- Resume Right Portion for Experience, Education & Skills -->
+        <section class="right-Portion">
+          <!-- Experience Section -->
+          <div class="section-Experience">
+            <h3 class="heading-Experience" contenteditable="true">
+              Experience
+            </h3>
+          </div>
+          <div class="add-Sec-Experience">
+            <h5 class="title-Experience" contenteditable="true">
+              Enter your position title here
+            </h5>
+            <p class="comp-Experience" contenteditable="true">
+              Company Name / Jan 2020 - Present
+            </p>
+            <p class="para-Experience" contenteditable="true">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
+              aperiam facere repellendus dolor aliquam sint placeat, reiciendis
+              rerum expedita! Laborum quos quod pariatur eligendi deserunt, nemo
+              nisi dolores excepturi dicta.
             </p>
           </div>
 
-          <div class="contact-Info">
-            <div class="info-Icon" id="icn2">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <p class="info-Text envelope" contenteditable="true">
-              youremail123@gmail.com
+          <!-- Education Section -->
+          <div class="section-Education" id="eduGenResume">
+            <h3 class="heading-Education" contenteditable="true">Education</h3>
+          </div>
+          <div class="add-Sec-Education">
+            <h5 class="institute-Education" contenteditable="true">
+              University of Karachi
+            </h5>
+            <p class="degree-Education" contenteditable="true">
+              Master of Business Management
+            </p>
+            <p class="year-Education" contenteditable="true">
+              Jan 2020 - Dec 2023
             </p>
           </div>
 
-          <div class="contact-Info">
-            <div class="info-Icon" id="icn3">
-              <i class="fa-solid fa-location-dot"></i>
+          <!-- Skills Section -->
+          <div class="section-Skills" id="skillGenResume">
+            <h3 class="heading-Skills" contenteditable="true">Skills</h3>
+          </div>
+
+          <div class="skills-List-Sec">
+            <div id="skill-List">
+              <div class="dot-Skill"></div>
+              <p class="none" id="skill-p" contenteditable="true">English</p>
             </div>
-            <p class="info-Text location" contenteditable="true">
-              Karachi, Sindh - Pakistan
-            </p>
           </div>
-        </div>
-
-        <!-- Languages Known -->
-        <div class="languages-Sec">
-          <h4 class="heading-Language" contenteditable="true">Languages</h4>
-        </div>
-        <div class="languages-List">
-          <div class="list" id="lang-List">
-            <div class="dot"></div>
-            <p class="none" id="lang-p" contenteditable="true">English</p>
-          </div>
-        </div>
-
-        <!-- Expertise Known -->
-        <div class="expertise-Sec">
-          <h4 class="heading-Expertise" contenteditable="true">Expertise</h4>
-        </div>
-        <div class="expertise-list">
-          <div class="list" id="expertise-List">
-            <div class="dot"></div>
-            <p class="none" id="expertise-p" contenteditable="true">English</p>
-          </div>
-        </div>
-
-        <!-- Left Portions Ends Here -->
-      </section>
-      <!-- Resume Right Portion for Experience, Education & Skills -->
-      <section class="right-Portion">
-        <!-- Experience Section -->
-        <div class="section-Experience">
-          <h3 class="heading-Experience" contenteditable="true">Experience</h3>
-        </div>
-        <div class="add-Sec-Experience">
-          <h5 class="title-Experience" contenteditable="true">
-            Enter your position title here
-          </h5>
-          <p class="comp-Experience" contenteditable="true">
-            Company Name / Jan 2020 - Present
-          </p>
-          <p class="para-Experience" contenteditable="true">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-            aperiam facere repellendus dolor aliquam sint placeat, reiciendis
-            rerum expedita! Laborum quos quod pariatur eligendi deserunt, nemo
-            nisi dolores excepturi dicta.
-          </p>
-        </div>
-
-        <!-- Education Section -->
-        <div class="section-Education" id="eduGenResume">
-          <h3 class="heading-Education" contenteditable="true">Education</h3>
-        </div>
-        <div class="add-Sec-Education">
-          <h5 class="institute-Education" contenteditable="true">
-            University of Karachi
-          </h5>
-          <p class="degree-Education" contenteditable="true">
-            Master of Business Management
-          </p>
-          <p class="year-Education" contenteditable="true">
-            Jan 2020 - Dec 2023
-          </p>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="section-Skills" id="skillGenResume">
-          <h3 class="heading-Skills" contenteditable="true">Skills</h3>
-        </div>
-
-        <div class="skills-List-Sec">
-          <div id="skill-List">
-            <div class="dot-Skill"></div>
-            <p class="none" id="skill-p" contenteditable="true">English</p>
-          </div>
-        </div>
-        <!-- Right Portions Ends Here -->
-      </section>
+          <!-- Right Portions Ends Here -->
+        </section>
+      </main>
     </main>
     <script src="script.js"></script>
   </body>

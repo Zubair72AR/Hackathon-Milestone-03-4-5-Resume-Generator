@@ -428,7 +428,8 @@ function generateResume() {
         // Transferring Data if Created More
         dataTransfer(`#skill-p${skill}`, `#skills-Input${skill}`);
     }
-    resume.style.display = "flex";
+    let resume2 = document.querySelector(".container");
+    resume2.style.display = "block";
     buttonsColor.style.display = "flex";
     btnGenerateResume.style.display = "none";
 }
@@ -436,19 +437,37 @@ function generateResume() {
 // DownLoad PDF
 /////////////////////////////////////////////////
 let buttonsColor = document.querySelector(".buttons-Color");
+// Image for Setting Bug
+let imgOutput = document.getElementById("imgOutput");
+// Select elements
 let resume = document.querySelector(".generate-Resume");
 let downloadPDF = document.querySelector("#Download-PDF");
-downloadPDF.addEventListener("click", () => {
-    let opt = {
-        margin: [-6.5, 0, 0, 0],
-        filename: resume + ".pdf",
-        image: { type: "jpeg", quality: 1 },
-        pagebreak: { avoid: "tr", mode: "css", before: "#nextpage1" },
-        html2canvas: { scale: 4, useCORS: true, dpi: 192, letterRendering: true },
-        jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
-    };
-    html2pdf().from(resume).set(opt).save();
-});
+if (downloadPDF) {
+    downloadPDF.addEventListener("click", () => {
+        let opt = {
+            margin: [0, 0, 0, 0],
+            filename: "resume.pdf", // Filename as a string
+            image: { type: "jpeg", quality: 1 },
+            pagebreak: { avoid: "tr", mode: "css", before: "#nextpage1" },
+            html2canvas: { scale: 4, useCORS: true, dpi: 192, letterRendering: true },
+            jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+        };
+        // Check if resume is properly selected
+        if (resume) {
+            imgOutput.style.zIndex = "99999";
+            html2pdf()
+                .from(resume)
+                .set(opt)
+                .save()
+                .catch((error) => {
+                console.error("Error generating PDF:", error);
+            });
+        }
+        else {
+            console.error("Resume element not found");
+        }
+    });
+}
 /////////////////////////////////////////////////
 // Color Changing
 /////////////////////////////////////////////////
@@ -496,7 +515,7 @@ function dummyInfo() {
     document.getElementById("profileImage-Input").src =
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeOlwb6YnVU55H4BNqtLm7T8b7thI-HiQBrg&s";
     document.getElementById("aboutMe-Input").value =
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aexercitationem, ipsam sit, illo aliquam officia earum autem adnesciunt rem, sed necessitatibus beatae soluta nobis veritatis.Voluptas repudiandae harum repellendus!";
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aexercitationem, autem adnesciunt rem, sed necessitatibus beatae soluta nobis veritatis.Voluptas repudiandae harum repellendus!";
     document.getElementById("phone-Input").value =
         "+92 333 123 4567";
     document.getElementById("email-Input").value =

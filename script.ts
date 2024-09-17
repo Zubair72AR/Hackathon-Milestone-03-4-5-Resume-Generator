@@ -520,7 +520,8 @@ function generateResume() {
     dataTransfer(`#skill-p${skill}`, `#skills-Input${skill}`);
   }
 
-  resume.style.display = "flex";
+  let resume2 = document.querySelector(".container") as HTMLElement;
+  resume2.style.display = "block";
   buttonsColor.style.display = "flex";
 
   btnGenerateResume.style.display = "none";
@@ -531,20 +532,39 @@ function generateResume() {
 /////////////////////////////////////////////////
 
 let buttonsColor = document.querySelector(".buttons-Color") as HTMLElement;
+// Image for Setting Bug
+let imgOutput = document.getElementById("imgOutput") as HTMLElement;
+
+// Select elements
 let resume = document.querySelector(".generate-Resume") as HTMLElement;
 let downloadPDF = document.querySelector("#Download-PDF") as HTMLElement;
-downloadPDF.addEventListener("click", () => {
-  let opt = {
-    margin: [-6.5, 0, 0, 0],
-    filename: resume + ".pdf",
-    image: { type: "jpeg", quality: 1 },
-    pagebreak: { avoid: "tr", mode: "css", before: "#nextpage1" },
-    html2canvas: { scale: 4, useCORS: true, dpi: 192, letterRendering: true },
-    jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
-  };
 
-  html2pdf().from(resume).set(opt).save();
-});
+if (downloadPDF) {
+  downloadPDF.addEventListener("click", () => {
+    let opt = {
+      margin: [0, 0, 0, 0],
+      filename: "resume.pdf", // Filename as a string
+      image: { type: "jpeg", quality: 1 },
+      pagebreak: { avoid: "tr", mode: "css", before: "#nextpage1" },
+      html2canvas: { scale: 4, useCORS: true, dpi: 192, letterRendering: true },
+      jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+    };
+
+    // Check if resume is properly selected
+    if (resume) {
+      imgOutput.style.zIndex = "99999";
+      html2pdf()
+        .from(resume)
+        .set(opt)
+        .save()
+        .catch((error) => {
+          console.error("Error generating PDF:", error);
+        });
+    } else {
+      console.error("Resume element not found");
+    }
+  });
+}
 
 /////////////////////////////////////////////////
 // Color Changing
@@ -600,7 +620,7 @@ function dummyInfo() {
   (document.getElementById("profileImage-Input") as HTMLInputElement).src =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeOlwb6YnVU55H4BNqtLm7T8b7thI-HiQBrg&s";
   (document.getElementById("aboutMe-Input") as HTMLInputElement).value =
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aexercitationem, ipsam sit, illo aliquam officia earum autem adnesciunt rem, sed necessitatibus beatae soluta nobis veritatis.Voluptas repudiandae harum repellendus!";
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aexercitationem, autem adnesciunt rem, sed necessitatibus beatae soluta nobis veritatis.Voluptas repudiandae harum repellendus!";
   (document.getElementById("phone-Input") as HTMLInputElement).value =
     "+92 333 123 4567";
   (document.getElementById("email-Input") as HTMLInputElement).value =

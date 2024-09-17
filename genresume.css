@@ -6,13 +6,16 @@
   --text-white: white;
   --text-dark: gray;
 }
+.container {
+  display: none;
+}
 
 /* Resume Output */
 .generate-Resume {
   position: relative;
   max-width: 19cm;
   min-height: 27.9cm;
-  display: none;
+  display: flex;
   margin: auto;
   background-color: white;
 }
@@ -33,7 +36,7 @@ img {
   z-index: 99999;
   width: 230px;
   height: 230px;
-  margin-top: 4.5rem;
+  margin-top: 3.8rem;
   border: 3px solid var(--Red);
   border-radius: 50%;
 }
@@ -83,7 +86,7 @@ img {
 /* About Me */
 .heading-AboutMe {
   outline: none;
-  margin: 3rem 0rem 0.5rem;
+  margin: 1.5rem 0rem 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 1.3rem;
@@ -95,17 +98,17 @@ img {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 300;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.8rem;
 }
 
 /* Contact Info */
 .contact-Sec {
   padding: 0.5rem;
-  margin: 0rem 1rem 2rem 1rem;
+  margin: 0rem 1rem 1rem 1rem;
 }
 .contact-Info {
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .info-Icon {
   background-color: var(--Red);
@@ -147,7 +150,7 @@ img {
 }
 .languages-List {
   width: 60%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 .list {
@@ -188,13 +191,13 @@ img {
 }
 .expertise-list {
   width: 60%;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 /*Left Portions Ends Here */
 
 /* Resume Right Portion for Experience, Education & Skills */
 .right-Portion {
-  padding-top: 20rem;
+  padding-top: 18rem;
   padding-left: 1.2rem;
   width: 57%;
 }
@@ -311,7 +314,7 @@ img {
 @media screen and (max-width: 700px) {
   /* Resume Generator */
   .generate-Resume {
-    display: none;
+    display: block;
   }
 
   /* Resume Left Portion */
@@ -329,7 +332,7 @@ img {
   .section-Name {
     display: none;
   }
-  .section-NameMedia {
+  .section-NameMQ {
     display: flex;
   }
 
